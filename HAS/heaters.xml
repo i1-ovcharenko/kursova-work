@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<ArrayOfHeater xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Heater xsi:type="OilRadiator">
+    <Id>7247</Id>
+    <HeaterType>Масляний радіатор</HeaterType>
+    <Manufacturer>Saturn</Manufacturer>
+    <Model>stf22000</Model>
+    <Service_area>40</Service_area>
+    <Power>2000</Power>
+    <Power_suply>Електрика</Power_suply>
+    <Placing>Підлоговий</Placing>
+    <Purpose>Побутовий/Офіс</Purpose>
+    <Control>Електромеханічне</Control>
+    <Heating_element>Трубчастий (ТЕН)</Heating_element>
+    <Dimensions>70X50X15</Dimensions>
+    <Cost>1800</Cost>
+    <Count>6</Count>
+    <Section_count>11</Section_count>
+  </Heater>
+  <Heater xsi:type="InfraRedHeater">
+    <Id>5017</Id>
+    <HeaterType>Інфрачервоний обігрівач</HeaterType>
+    <Manufacturer>UFO</Manufacturer>
+    <Model>uf5j2500</Model>
+    <Service_area>30</Service_area>
+    <Power>2500</Power>
+    <Power_suply>Електрика</Power_suply>
+    <Placing>Вертикальний/горизонтальний</Placing>
+    <Purpose>Побутовий</Purpose>
+    <Control>Електронне</Control>
+    <Heating_element>Карбоновий</Heating_element>
+    <Dimensions>160X60X20</Dimensions>
+    <Cost>2200</Cost>
+    <Count>9</Count>
+    <Section_count>0</Section_count>
+  </Heater>
+  <Heater xsi:type="InfraRedHeater">
+    <Id>9504</Id>
+    <HeaterType>Інфрачервоний обігрівач</HeaterType>
+    <Manufacturer>UFO</Manufacturer>
+    <Model>uf5j3000</Model>
+    <Service_area>50</Service_area>
+    <Power>4500</Power>
+    <Power_suply>Електрика</Power_suply>
+    <Placing>Вертикальний/горизонтальний</Placing>
+    <Purpose>Побутовий/Офіс</Purpose>
+    <Control>Електронне</Control>
+    <Heating_element>Галогеновий</Heating_element>
+    <Dimensions>160X65X20</Dimensions>
+    <Cost>2630</Cost>
+    <Count>4</Count>
+    <Section_count>0</Section_count>
+  </Heater>
+  <Heater xsi:type="HeatGun">
+    <Id>9877</Id>
+    <HeaterType>Теплова гармата</HeaterType>
+    <Manufacturer>Termia</Manufacturer>
+    <Model>ts-diz45</Model>
+    <Service_area>150</Service_area>
+    <Power>4500</Power>
+    <Power_suply>Дизель</Power_suply>
+    <Placing>Підлоговий</Placing>
+    <Purpose>Промисловий</Purpose>
+    <Control>Механічне</Control>
+    <Heating_element>Спіральний</Heating_element>
+    <Dimensions>50X70X35</Dimensions>
+    <Cost>3800</Cost>
+    <Count>3</Count>
+    <Section_count>0</Section_count>
+  </Heater>
+</ArrayOfHeater>eater>
+</ArrayOfHeater>
