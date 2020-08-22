@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HAS
 {
@@ -11,8 +7,8 @@ namespace HAS
     {
         public CeramicPanel() { }
         public CeramicPanel(string heatertype, string manufacturer, string model, string service_area, int power, string power_suply, string placing,
-            string purpose, string control, string heating_element, string dimensions, double cost, int count) :
-            base(heatertype, manufacturer, model, service_area, power, power_suply, placing, purpose, control, heating_element, dimensions, cost, count)
+            string purpose, string control, string heating_element, string dimensions, double cost) :
+            base(heatertype, manufacturer, model, service_area, power, power_suply, placing, purpose, control, heating_element, dimensions, cost)
         { }
         public override string OutputInfo()
         {

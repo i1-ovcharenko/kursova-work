@@ -10,7 +10,6 @@ namespace HAS
     public partial class Form1 : Form
     {
         Heater heater = new Heater();
-
         List<Heater> heaters = new List<Heater>();
 
         string fileName = "";//шлях до файлу для читання/запису
@@ -24,12 +23,12 @@ namespace HAS
         }
 
         public static void autoResizeColumns(ListView lv)
-        {//метод підстраює розмір колонок в таблицях
+        {//метод підстраює розмір колонок в таблиці listView
             lv.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             ListView.ColumnHeaderCollection cc = lv.Columns;
             for (int i = 0; i < cc.Count; i++)
             {
-                int colWidth = TextRenderer.MeasureText(cc[i].Text, lv.Font).Width + 10;
+                int colWidth = TextRenderer.MeasureText(cc[i].Text, lv.Font).Width + 5;
                 if (colWidth > cc[i].Width)
                 {
                     cc[i].Width = colWidth;
@@ -38,7 +37,7 @@ namespace HAS
         }
 
         private void ShowDataInList()
-        {
+        {//метод, що виводить інформацію із списку в таблицю
             listView.Items.Clear();
             foreach (Heater h in heaters)
             {
@@ -50,7 +49,7 @@ namespace HAS
         }
 
         private void OnlyNum(KeyPressEventArgs e)
-        {
+        {//метод для введення в поля ільки цифр
             if (Char.IsNumber(e.KeyChar))
                 return;
             if (Char.IsControl(e.KeyChar))
@@ -59,15 +58,13 @@ namespace HAS
         }
 
         private void OpenFileMenuItem_Click(object sender, EventArgs e)
-        {
-
+        {//відкриття файлу
             var xmlFormatter = new XmlSerializer(typeof(List<Heater>));
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "XML document (*.xml)|*.xml|All files (*.*)|*.*";
             openFileDialog1.FileName = "heaters.xml";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
-
             try
             {
                 if (openFileDialog1.ShowDialog(this) == DialogResult.OK)
@@ -88,12 +85,11 @@ namespace HAS
         }
 
         private void SaveFileMenuItem_Click(object sender, EventArgs e)
-        {
-            //збереження даних в існуючий файл
+        {//меод для збереження даних в існуючий файл
             if (fileName != "")
             {//якщо шлях до файлу відомий, записуємо в нього
                 XmlSerializer formatter = new XmlSerializer(typeof(List<Heater>));
-                using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
+                using (FileStream fs = new FileStream(fileName, FileMode.Create))
                 {
                     formatter.Serialize(fs, heaters);
                 }
@@ -106,7 +102,7 @@ namespace HAS
         }
 
         private void SaveAsMenuItem_Click(object sender, EventArgs e)
-        {
+        {//збереження даних в новий файл
             SaveFileDialog SaveFD = new SaveFileDialog();
             SaveFD.InitialDirectory = "d:\\";
             SaveFD.Filter = "XML document (*.xml)|*.xml|All files (*.*)|*.*";
@@ -116,7 +112,7 @@ namespace HAS
             if (SaveFD.ShowDialog() == DialogResult.OK)
             {
                 XmlSerializer formatter = new XmlSerializer(typeof(List<Heater>));
-                using (FileStream fs = new FileStream(SaveFD.FileName, FileMode.OpenOrCreate))
+                using (FileStream fs = new FileStream(SaveFD.FileName, FileMode.CreateNew))
                 {
                     formatter.Serialize(fs, heaters);
                 }
@@ -125,32 +121,34 @@ namespace HAS
         }
 
         private void AddNewMenuItem_Click(object sender, EventArgs e)
-        {
-            Size = new Size(1120, Size.Height);
+        {//відкриття полів для введення нових даних
+            Size = new Size(1320, Size.Height);
             EditPanel.Visible = false;
             SearchPanel.Visible = false;
             AddPanel.Visible = true;
         }
 
         private void SeachMenuItem_Click(object sender, EventArgs e)
-        {
-            Size = new Size(1120, Size.Height);
+        {//відкриття полів для пошуку
+            Size = new Size(1320, Size.Height);
             AddPanel.Visible = false;
             EditPanel.Visible = false;
             SearchPanel.Visible = true;
+            //заповнення комбо-боксів існуючими даними
             foreach(Heater heat in heaters)
             {
-                SearchManufactCombo.Items.Add(heat.Manufacturer);
-                SearchAreaCombo.Items.Add(heat.Service_area);
+                if(!SearchManufactCombo.Items.Contains(heat.Manufacturer))
+                    SearchManufactCombo.Items.Add(heat.Manufacturer);
+                if (!SearchAreaCombo.Items.Contains(heat.Service_area))
+                    SearchAreaCombo.Items.Add(heat.Service_area);
             }
-
         }
 
         private void EditMenuItem1_Click(object sender, EventArgs e)
-        {
+        {//відкриття полів для редагування вибраних даних
             if (listView.SelectedItems.Count > 0)
             {
-                Size = new Size(1120, Size.Height);
+                Size = new Size(1320, Size.Height);
                 AddPanel.Visible = false;
                 SearchPanel.Visible = false;
                 EditPanel.Visible = true;
@@ -169,17 +167,16 @@ namespace HAS
                         EditElementCombo.Text = heat.Heating_element;
                         EditDimms.Text = heat.Dimensions;
                         EditCost.Text = Convert.ToString(heat.Cost);
-                        EditCount.Text = Convert.ToString(heat.Count);
                         EditSectionCombo.Text = Convert.ToString(heat.Section_count);
                     }
-                }
+                }//при редагуванні не можливо вибрати інший рядок з таблиці
                 listView.Enabled = false;
             } else
                 MessageBox.Show("Виберіть елемент для редагування!");
         }
 
         private void DeleteMenuItem_Click(object sender, EventArgs e)
-        {
+        {//видалення вибраного запису
             if (listView.SelectedItems.Count != 0)
             {
                 DialogResult dialogRes = MessageBox.Show("Ви дійсно бажаєте видалити вибраний запис?",
@@ -193,55 +190,50 @@ namespace HAS
                 MessageBox.Show("Виберіть елемент для видалення");
         }
 
-        private void HowMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AboutMenuItem_Click(object sender, EventArgs e)
-        {
-
+        {//про програму
+            MessageBox.Show("Програма \"Система обліку обігрівачів повітря\".\n" +
+                "Розроблена студентом групи сКС-19, Овчаренко Іваном, в якості додатку курсової роботи.", "Про програму", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void addCancelButton_Click(object sender, EventArgs e)
-        {
-            Size = new Size(825, Size.Height);
+        {//скасування додавання
+            Size = new Size(1025, Size.Height);
             AddPanel.Visible = false;
             EditPanel.Visible = false;
         }
 
         private void editCancelButton_Click(object sender, EventArgs e)
-        {
-            Size = new Size(825, Size.Height);
+        {//скасування редагування
+            Size = new Size(1025, Size.Height);
             AddPanel.Visible = false;
             EditPanel.Visible = false;
             listView.Enabled = true;
         }
 
         private void editClearButton_Click(object sender, EventArgs e)
-        {
-            EditControlCombo.Text = EditArea.Text = EditCost.Text = EditCount.Text = EditDimms.Text =
+        {//очисткка полів редагування
+            EditControlCombo.Text = EditArea.Text = EditCost.Text = EditDimms.Text =
             EditElementCombo.Text = EditManufacturer.Text = EditModel.Text = EditPlacingCombo.Text =
             EditPowerCombo.Text = EditPurposeCombo.Text = EditSectionCombo.Text = EditSupplyCombo.Text = "";
             listView.Enabled = true;
         }
 
         private void addClearButton_Click(object sender, EventArgs e)
-        {
-            addAreaTextBox.Text = addControlCombo.Text = addCostTextBox.Text = addCounTextBox.Text = addDimmsTextBox.Text =
+        {//очисткка полів додавання
+            addAreaTextBox.Text = addControlCombo.Text = addCostTextBox.Text = addDimmsTextBox.Text =
             addElementCombo.Text = addManufacturerTextBox.Text = addModelTextBox.Text = addPlacingCombo.Text =
             addPowerCombo.Text = addPurposeCombo.Text = addSectCombo.Text = addSuplyCombo.Text = "";
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
-        {
-            addAreaTextBox.Enabled = addControlCombo.Enabled = addCostTextBox.Enabled = addCounTextBox.Enabled = addDimmsTextBox.Enabled =
+        {//вибір типу обігрівача для додавання
+            addAreaTextBox.Enabled = addControlCombo.Enabled = addCostTextBox.Enabled = addDimmsTextBox.Enabled =
             addElementCombo.Enabled = addManufacturerTextBox.Enabled = addModelTextBox.Enabled = addPlacingCombo.Enabled =
             addPowerCombo.Enabled = addPurposeCombo.Enabled = addSectCombo.Enabled = addSuplyCombo.Enabled = true;
 
             if (comboBox1.Text == "Масляний радіатор")
             {
-
                 addSectCombo.Visible = true;
                 labelSections.Visible = true;
             }
@@ -253,31 +245,21 @@ namespace HAS
         }
 
         private void EditCost_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {//дозволяємо вводити лише цілі/дійсні числа
             if (Char.IsNumber(e.KeyChar) || (e.KeyChar == '.') || Char.IsControl(e.KeyChar))
                 return;
             e.Handled = true;
-        }
-
-        private void addCounTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            OnlyNum(e);
         }
 
         private void addCostTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {//дозволяємо вводити лише цілі/дійсні числа
             if (Char.IsNumber(e.KeyChar) || (e.KeyChar == '.') || Char.IsControl(e.KeyChar))
                 return;
             e.Handled = true;
         }
 
-        private void editCounTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            OnlyNum(e);
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {//налаштування listView при завантаженні форми
             listView.GridLines = true;
             listView.FullRowSelect = true;
             listView.View = View.Details;
@@ -294,12 +276,11 @@ namespace HAS
             listView.Columns.Add("Гріючий елемент");
             listView.Columns.Add("Габарити");
             listView.Columns.Add("Вартість");
-            listView.Columns.Add("Кількість");
             listView.Columns.Add("К-сть секцій");
         }
 
         private void addButton_Click(object sender, EventArgs e)
-        {
+        {//додавання нового запису
             try
             {
                 if (comboBox1.Text == "Тепловентилятор")
@@ -316,8 +297,7 @@ namespace HAS
                         addControlCombo.Text,
                         addElementCombo.Text,
                         addDimmsTextBox.Text,
-                        Convert.ToDouble(addCostTextBox.Text),
-                        Convert.ToInt32(addCounTextBox.Text)));
+                        Convert.ToDouble(addCostTextBox.Text)));
                 }
                 else if (comboBox1.Text == "Інфрачервоний обігрівач")
                 {
@@ -333,8 +313,7 @@ namespace HAS
                         addControlCombo.Text,
                         addElementCombo.Text,
                         addDimmsTextBox.Text,
-                        Convert.ToDouble(addCostTextBox.Text),
-                        Convert.ToInt32(addCounTextBox.Text)));
+                        Convert.ToDouble(addCostTextBox.Text)));
                 }
                 else if (comboBox1.Text == "Конвектор")
                 {
@@ -350,8 +329,7 @@ namespace HAS
                         addControlCombo.Text,
                         addElementCombo.Text,
                         addDimmsTextBox.Text,
-                        Convert.ToDouble(addCostTextBox.Text),
-                        Convert.ToInt32(addCounTextBox.Text)));
+                        Convert.ToDouble(addCostTextBox.Text)));
                 }
                 else if (comboBox1.Text == "Масляний радіатор" && addSectCombo.Text != "")
                 {
@@ -368,7 +346,6 @@ namespace HAS
                         addElementCombo.Text,
                         addDimmsTextBox.Text,
                         Convert.ToDouble(addCostTextBox.Text),
-                        Convert.ToInt32(addCounTextBox.Text),
                         Convert.ToInt32(addSectCombo.Text)));
                 }
                 else if (comboBox1.Text == "Керамічна панель")
@@ -385,8 +362,7 @@ namespace HAS
                         addControlCombo.Text,
                         addElementCombo.Text,
                         addDimmsTextBox.Text,
-                        Convert.ToDouble(addCostTextBox.Text),
-                        Convert.ToInt32(addCounTextBox.Text)));
+                        Convert.ToDouble(addCostTextBox.Text)));
                 }
                 else if (comboBox1.Text == "Теплова гармата")
                 {
@@ -402,8 +378,7 @@ namespace HAS
                         addControlCombo.Text,
                         addElementCombo.Text,
                         addDimmsTextBox.Text,
-                        Convert.ToDouble(addCostTextBox.Text),
-                        Convert.ToInt32(addCounTextBox.Text)));
+                        Convert.ToDouble(addCostTextBox.Text)));
                 }
                 else
                     MessageBox.Show("Виберіть тип обігрівача із списку!");
@@ -416,7 +391,7 @@ namespace HAS
         }
 
         private void EditButton_Click(object sender, EventArgs e)
-        {
+        {//редагування обраного запису
             try
             {
                 foreach (Heater heat in heaters)
@@ -434,7 +409,6 @@ namespace HAS
                         heat.Heating_element = EditElementCombo.Text;
                         heat.Dimensions = EditDimms.Text;
                         heat.Cost = Convert.ToInt32(EditCost.Text);
-                        heat.Count = Convert.ToInt32(EditCount.Text);
                         heat.Section_count = Convert.ToInt32(EditSectionCombo.Text);
                     }
                 }
@@ -471,7 +445,7 @@ namespace HAS
         }
 
         private void CloseMenuItem_Click(object sender, EventArgs e)
-        {
+        {//завершення роботи з поточними даними
             DialogResult dialogRes = MessageBox.Show("Ви дійсно бажаєте закрити поточну сесію?\n" +
                 "Зміни не будуть збережені.","Закрити поточну сесію", MessageBoxButtons.YesNo);
             if (dialogRes == DialogResult.Yes)
@@ -482,21 +456,21 @@ namespace HAS
         }
 
         private void SearchClearButton_Click(object sender, EventArgs e)
-        {
+        {//очистка полів для пошуку
             SearchAreaCombo.Text = SearchControlCombo.Text = SearchPlacingCombo.Text = SearchPowerCombo.Text =
                 SearchPurposeCombo.Text = SearchSectCombo.Text = SearchSupplyCombo.Text = SearchTypeCombo.Text = SearchManufactCombo.Text = "";
         }
 
         private void SearchCancelButton_Click(object sender, EventArgs e)
-        {
-            Size = new Size(825, Size.Height);
+        {//скасування пошуку
+            Size = new Size(1025, Size.Height);
             SearchPanel.Visible = false;
             ShowDataInList();
         }
 
         private void SearchTypeCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
+        {//пошук за типом обігрівачів
+            if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
@@ -514,11 +488,12 @@ namespace HAS
                 }
                 return;
             }
+            e.Handled = true;
         }
 
         private void SearchManufactCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
+        {//пошук за виробником
+            if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
@@ -536,10 +511,11 @@ namespace HAS
                 }
                 return;
             }
+            e.Handled = true;
         }
 
         private void SearchAreaCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {//пошук за робочою площею
             if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
@@ -558,10 +534,11 @@ namespace HAS
                 }
                 return;
             }
+            e.Handled = true;
         }
 
         private void SearchPowerCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {//пошук за потужністю
             if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
@@ -580,11 +557,12 @@ namespace HAS
                 }
                 return;
             }
+            e.Handled = true;
         }
 
         private void SearchSupplyCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
+        {//пошук за типом живлення
+            if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
@@ -605,8 +583,8 @@ namespace HAS
         }
 
         private void SearchPlacingCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
+        {//пошук за розміщенням/монтажем
+            if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
@@ -627,8 +605,8 @@ namespace HAS
         }
 
         private void SearchPurposeCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
+        {//пошук за призначенням
+            if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
@@ -649,8 +627,8 @@ namespace HAS
         }
 
         private void SearchControlCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
+        {//пошук за способом керування
+            if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
@@ -671,7 +649,7 @@ namespace HAS
         }
 
         private void SearchSectCombo_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {//пошук за кількістю секцій масляних радіаторів
             if (Char.IsNumber(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
                 if (e.KeyChar == (char)Keys.Enter)
@@ -690,6 +668,43 @@ namespace HAS
                 }
                 return;
             }
+            e.Handled = true;
+        }
+        //дублювання основних операцій з MenuStrip ToolStrip
+        private void AddStripButton_Click(object sender, EventArgs e)
+        {
+            forAction action = AddNewMenuItem_Click;
+            action(sender, e);
+        }
+
+        private void OpenStripButton_Click(object sender, EventArgs e)
+        {
+            forAction action = OpenFileMenuItem_Click;
+            action(sender, e);
+        }
+
+        private void SaveStripButton_Click(object sender, EventArgs e)
+        {
+            forAction action = SaveFileMenuItem_Click;
+            action(sender, e);
+        }
+
+        private void EditStripButton_Click(object sender, EventArgs e)
+        {
+            forAction action = EditMenuItem1_Click;
+            action(sender, e);
+        }
+
+        private void DeleteStripButton_Click(object sender, EventArgs e)
+        {
+            forAction action = DeleteMenuItem_Click;
+            action(sender, e);
+        }
+
+        private void SearchStripButton_Click(object sender, EventArgs e)
+        {
+            forAction action = SeachMenuItem_Click;
+            action(sender, e);
         }
     }
 }

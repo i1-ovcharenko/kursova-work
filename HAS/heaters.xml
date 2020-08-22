@@ -14,7 +14,6 @@
     <Heating_element>Трубчастий (ТЕН)</Heating_element>
     <Dimensions>70X50X15</Dimensions>
     <Cost>1800</Cost>
-    <Count>6</Count>
     <Section_count>11</Section_count>
   </Heater>
   <Heater xsi:type="InfraRedHeater">
@@ -31,7 +30,6 @@
     <Heating_element>Карбоновий</Heating_element>
     <Dimensions>160X60X20</Dimensions>
     <Cost>2200</Cost>
-    <Count>9</Count>
     <Section_count>0</Section_count>
   </Heater>
   <Heater xsi:type="InfraRedHeater">
@@ -48,7 +46,6 @@
     <Heating_element>Галогеновий</Heating_element>
     <Dimensions>160X65X20</Dimensions>
     <Cost>2630</Cost>
-    <Count>4</Count>
     <Section_count>0</Section_count>
   </Heater>
   <Heater xsi:type="HeatGun">
@@ -62,10 +59,25 @@
     <Placing>Підлоговий</Placing>
     <Purpose>Промисловий</Purpose>
     <Control>Механічне</Control>
-    <Heating_element>Спіральний</Heating_element>
+    <Heating_element>Непрямий нагрів</Heating_element>
     <Dimensions>50X70X35</Dimensions>
     <Cost>3800</Cost>
-    <Count>3</Count>
+    <Section_count>0</Section_count>
+  </Heater>
+  <Heater xsi:type="Convector">
+    <Id>5444</Id>
+    <HeaterType>Конвектор</HeaterType>
+    <Manufacturer>Gorenje</Manufacturer>
+    <Model>superrr25</Model>
+    <Service_area>24</Service_area>
+    <Power>2000</Power>
+    <Power_suply>Електрика</Power_suply>
+    <Placing>Підлоговий</Placing>
+    <Purpose>Побутовий</Purpose>
+    <Control>Механічне</Control>
+    <Heating_element>Керамічний</Heating_element>
+    <Dimensions>45X70X12</Dimensions>
+    <Cost>950</Cost>
     <Section_count>0</Section_count>
   </Heater>
 </ArrayOfHeater>

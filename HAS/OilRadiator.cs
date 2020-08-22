@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HAS
 {
@@ -11,15 +7,15 @@ namespace HAS
     {
         public OilRadiator() { }
         public OilRadiator(string heatertype, string manufacturer, string model, string service_area, int power, string power_suply, string placing,
-            string purpose, string control, string heating_element, string dimensions, double cost, int count, int sections): 
-            base(heatertype, manufacturer, model, service_area, power, power_suply, placing, purpose, control, heating_element, dimensions, cost, count)
+            string purpose, string control, string heating_element, string dimensions, double cost, int sections): 
+            base(heatertype, manufacturer, model, service_area, power, power_suply, placing, purpose, control, heating_element, dimensions, cost)
         {
             Section_count = sections;
         }
         public override string OutputInfo()
         {
             return $"{Id}*{HeaterType}*{Manufacturer}*{Model}*{Service_area}*{Power}*{Power_suply}*{Placing}*" +
-                $"{Purpose}*{Control}*{Heating_element}*{Dimensions}*{Cost}*{Count}*{Section_count}*";
+                $"{Purpose}*{Control}*{Heating_element}*{Dimensions}*{Cost}*{Section_count}*";
         }
     }
 }

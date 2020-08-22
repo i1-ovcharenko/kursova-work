@@ -41,44 +41,9 @@
             this.EditMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HowMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.listView = new System.Windows.Forms.ListView();
-            this.AddPanel = new System.Windows.Forms.Panel();
-            this.addAreaTextBox = new System.Windows.Forms.TextBox();
-            this.addControlCombo = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.addPlacingCombo = new System.Windows.Forms.ComboBox();
-            this.addSuplyCombo = new System.Windows.Forms.ComboBox();
-            this.addPowerCombo = new System.Windows.Forms.ComboBox();
-            this.addSectCombo = new System.Windows.Forms.ComboBox();
-            this.addElementCombo = new System.Windows.Forms.ComboBox();
-            this.addPurposeCombo = new System.Windows.Forms.ComboBox();
-            this.labelSections = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.addCounTextBox = new System.Windows.Forms.TextBox();
-            this.labelCount = new System.Windows.Forms.Label();
-            this.addCostTextBox = new System.Windows.Forms.TextBox();
-            this.labelCost = new System.Windows.Forms.Label();
-            this.addDimmsTextBox = new System.Windows.Forms.TextBox();
-            this.labelDimms = new System.Windows.Forms.Label();
-            this.labelElement = new System.Windows.Forms.Label();
-            this.labelControl = new System.Windows.Forms.Label();
-            this.labelPurpose = new System.Windows.Forms.Label();
-            this.labelPlacing = new System.Windows.Forms.Label();
-            this.labelSupply = new System.Windows.Forms.Label();
-            this.labelPower = new System.Windows.Forms.Label();
-            this.labelArea = new System.Windows.Forms.Label();
-            this.addModelTextBox = new System.Windows.Forms.TextBox();
-            this.labelModel = new System.Windows.Forms.Label();
-            this.addManufacturerTextBox = new System.Windows.Forms.TextBox();
-            this.labelManufacturer = new System.Windows.Forms.Label();
-            this.addCancelButton = new System.Windows.Forms.Button();
-            this.addClearButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
             this.EditArea = new System.Windows.Forms.TextBox();
             this.EditControlCombo = new System.Windows.Forms.ComboBox();
@@ -90,8 +55,6 @@
             this.EditPurposeCombo = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.EditCount = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.EditCost = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.EditDimms = new System.Windows.Forms.TextBox();
@@ -131,11 +94,54 @@
             this.SearchManufactCombo = new System.Windows.Forms.ComboBox();
             this.SearchAreaCombo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.AddStripButton = new System.Windows.Forms.ToolStripButton();
+            this.OpenStripButton = new System.Windows.Forms.ToolStripButton();
+            this.SaveStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.EditStripButton = new System.Windows.Forms.ToolStripButton();
+            this.DeleteStripButton = new System.Windows.Forms.ToolStripButton();
+            this.SearchStripButton = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listView = new System.Windows.Forms.ListView();
+            this.addButton = new System.Windows.Forms.Button();
+            this.addClearButton = new System.Windows.Forms.Button();
+            this.addCancelButton = new System.Windows.Forms.Button();
+            this.labelManufacturer = new System.Windows.Forms.Label();
+            this.addManufacturerTextBox = new System.Windows.Forms.TextBox();
+            this.labelModel = new System.Windows.Forms.Label();
+            this.addModelTextBox = new System.Windows.Forms.TextBox();
+            this.labelArea = new System.Windows.Forms.Label();
+            this.labelPower = new System.Windows.Forms.Label();
+            this.labelSupply = new System.Windows.Forms.Label();
+            this.labelPlacing = new System.Windows.Forms.Label();
+            this.labelPurpose = new System.Windows.Forms.Label();
+            this.labelControl = new System.Windows.Forms.Label();
+            this.labelElement = new System.Windows.Forms.Label();
+            this.labelDimms = new System.Windows.Forms.Label();
+            this.addDimmsTextBox = new System.Windows.Forms.TextBox();
+            this.labelCost = new System.Windows.Forms.Label();
+            this.addCostTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelSections = new System.Windows.Forms.Label();
+            this.addPurposeCombo = new System.Windows.Forms.ComboBox();
+            this.addElementCombo = new System.Windows.Forms.ComboBox();
+            this.addSectCombo = new System.Windows.Forms.ComboBox();
+            this.addPowerCombo = new System.Windows.Forms.ComboBox();
+            this.addSuplyCombo = new System.Windows.Forms.ComboBox();
+            this.addPlacingCombo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.addControlCombo = new System.Windows.Forms.ComboBox();
+            this.addAreaTextBox = new System.Windows.Forms.TextBox();
+            this.AddPanel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.AddPanel.SuspendLayout();
             this.EditPanel.SuspendLayout();
             this.SearchPanel.SuspendLayout();
+            this.toolStrip.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.AddPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -218,16 +224,9 @@
             // HelpMenuItem
             // 
             this.HelpMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HowMenuItem,
             this.AboutMenuItem});
             this.HelpMenuItem.Name = "HelpMenuItem";
             resources.ApplyResources(this.HelpMenuItem, "HelpMenuItem");
-            // 
-            // HowMenuItem
-            // 
-            this.HowMenuItem.Name = "HowMenuItem";
-            resources.ApplyResources(this.HowMenuItem, "HowMenuItem");
-            this.HowMenuItem.Click += new System.EventHandler(this.HowMenuItem_Click);
             // 
             // AboutMenuItem
             // 
@@ -238,287 +237,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.listView);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // listView
-            // 
-            resources.ApplyResources(this.listView, "listView");
-            this.listView.HideSelection = false;
-            this.listView.Name = "listView";
-            this.listView.UseCompatibleStateImageBehavior = false;
-            // 
-            // AddPanel
-            // 
-            this.AddPanel.Controls.Add(this.addAreaTextBox);
-            this.AddPanel.Controls.Add(this.addControlCombo);
-            this.AddPanel.Controls.Add(this.label1);
-            this.AddPanel.Controls.Add(this.addPlacingCombo);
-            this.AddPanel.Controls.Add(this.addSuplyCombo);
-            this.AddPanel.Controls.Add(this.addPowerCombo);
-            this.AddPanel.Controls.Add(this.addSectCombo);
-            this.AddPanel.Controls.Add(this.addElementCombo);
-            this.AddPanel.Controls.Add(this.addPurposeCombo);
-            this.AddPanel.Controls.Add(this.labelSections);
-            this.AddPanel.Controls.Add(this.comboBox1);
-            this.AddPanel.Controls.Add(this.addCounTextBox);
-            this.AddPanel.Controls.Add(this.labelCount);
-            this.AddPanel.Controls.Add(this.addCostTextBox);
-            this.AddPanel.Controls.Add(this.labelCost);
-            this.AddPanel.Controls.Add(this.addDimmsTextBox);
-            this.AddPanel.Controls.Add(this.labelDimms);
-            this.AddPanel.Controls.Add(this.labelElement);
-            this.AddPanel.Controls.Add(this.labelControl);
-            this.AddPanel.Controls.Add(this.labelPurpose);
-            this.AddPanel.Controls.Add(this.labelPlacing);
-            this.AddPanel.Controls.Add(this.labelSupply);
-            this.AddPanel.Controls.Add(this.labelPower);
-            this.AddPanel.Controls.Add(this.labelArea);
-            this.AddPanel.Controls.Add(this.addModelTextBox);
-            this.AddPanel.Controls.Add(this.labelModel);
-            this.AddPanel.Controls.Add(this.addManufacturerTextBox);
-            this.AddPanel.Controls.Add(this.labelManufacturer);
-            this.AddPanel.Controls.Add(this.addCancelButton);
-            this.AddPanel.Controls.Add(this.addClearButton);
-            this.AddPanel.Controls.Add(this.addButton);
-            resources.ApplyResources(this.AddPanel, "AddPanel");
-            this.AddPanel.Name = "AddPanel";
-            // 
-            // addAreaTextBox
-            // 
-            resources.ApplyResources(this.addAreaTextBox, "addAreaTextBox");
-            this.addAreaTextBox.Name = "addAreaTextBox";
-            this.addAreaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addAreaTextBox_KeyPress);
-            // 
-            // addControlCombo
-            // 
-            resources.ApplyResources(this.addControlCombo, "addControlCombo");
-            this.addControlCombo.FormattingEnabled = true;
-            this.addControlCombo.Items.AddRange(new object[] {
-            resources.GetString("addControlCombo.Items"),
-            resources.GetString("addControlCombo.Items1"),
-            resources.GetString("addControlCombo.Items2"),
-            resources.GetString("addControlCombo.Items3")});
-            this.addControlCombo.Name = "addControlCombo";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // addPlacingCombo
-            // 
-            resources.ApplyResources(this.addPlacingCombo, "addPlacingCombo");
-            this.addPlacingCombo.FormattingEnabled = true;
-            this.addPlacingCombo.Items.AddRange(new object[] {
-            resources.GetString("addPlacingCombo.Items"),
-            resources.GetString("addPlacingCombo.Items1"),
-            resources.GetString("addPlacingCombo.Items2"),
-            resources.GetString("addPlacingCombo.Items3"),
-            resources.GetString("addPlacingCombo.Items4"),
-            resources.GetString("addPlacingCombo.Items5"),
-            resources.GetString("addPlacingCombo.Items6")});
-            this.addPlacingCombo.Name = "addPlacingCombo";
-            // 
-            // addSuplyCombo
-            // 
-            resources.ApplyResources(this.addSuplyCombo, "addSuplyCombo");
-            this.addSuplyCombo.FormattingEnabled = true;
-            this.addSuplyCombo.Items.AddRange(new object[] {
-            resources.GetString("addSuplyCombo.Items"),
-            resources.GetString("addSuplyCombo.Items1"),
-            resources.GetString("addSuplyCombo.Items2"),
-            resources.GetString("addSuplyCombo.Items3")});
-            this.addSuplyCombo.Name = "addSuplyCombo";
-            // 
-            // addPowerCombo
-            // 
-            resources.ApplyResources(this.addPowerCombo, "addPowerCombo");
-            this.addPowerCombo.FormattingEnabled = true;
-            this.addPowerCombo.Items.AddRange(new object[] {
-            resources.GetString("addPowerCombo.Items"),
-            resources.GetString("addPowerCombo.Items1"),
-            resources.GetString("addPowerCombo.Items2"),
-            resources.GetString("addPowerCombo.Items3"),
-            resources.GetString("addPowerCombo.Items4"),
-            resources.GetString("addPowerCombo.Items5"),
-            resources.GetString("addPowerCombo.Items6"),
-            resources.GetString("addPowerCombo.Items7"),
-            resources.GetString("addPowerCombo.Items8"),
-            resources.GetString("addPowerCombo.Items9"),
-            resources.GetString("addPowerCombo.Items10"),
-            resources.GetString("addPowerCombo.Items11"),
-            resources.GetString("addPowerCombo.Items12"),
-            resources.GetString("addPowerCombo.Items13")});
-            this.addPowerCombo.Name = "addPowerCombo";
-            this.addPowerCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addPowerCombo_KeyPress);
-            // 
-            // addSectCombo
-            // 
-            resources.ApplyResources(this.addSectCombo, "addSectCombo");
-            this.addSectCombo.FormattingEnabled = true;
-            this.addSectCombo.Items.AddRange(new object[] {
-            resources.GetString("addSectCombo.Items"),
-            resources.GetString("addSectCombo.Items1"),
-            resources.GetString("addSectCombo.Items2"),
-            resources.GetString("addSectCombo.Items3"),
-            resources.GetString("addSectCombo.Items4")});
-            this.addSectCombo.Name = "addSectCombo";
-            // 
-            // addElementCombo
-            // 
-            resources.ApplyResources(this.addElementCombo, "addElementCombo");
-            this.addElementCombo.FormattingEnabled = true;
-            this.addElementCombo.Items.AddRange(new object[] {
-            resources.GetString("addElementCombo.Items"),
-            resources.GetString("addElementCombo.Items1"),
-            resources.GetString("addElementCombo.Items2"),
-            resources.GetString("addElementCombo.Items3"),
-            resources.GetString("addElementCombo.Items4"),
-            resources.GetString("addElementCombo.Items5")});
-            this.addElementCombo.Name = "addElementCombo";
-            // 
-            // addPurposeCombo
-            // 
-            resources.ApplyResources(this.addPurposeCombo, "addPurposeCombo");
-            this.addPurposeCombo.FormattingEnabled = true;
-            this.addPurposeCombo.Items.AddRange(new object[] {
-            resources.GetString("addPurposeCombo.Items"),
-            resources.GetString("addPurposeCombo.Items1"),
-            resources.GetString("addPurposeCombo.Items2"),
-            resources.GetString("addPurposeCombo.Items3")});
-            this.addPurposeCombo.Name = "addPurposeCombo";
-            // 
-            // labelSections
-            // 
-            resources.ApplyResources(this.labelSections, "labelSections");
-            this.labelSections.Name = "labelSections";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3"),
-            resources.GetString("comboBox1.Items4"),
-            resources.GetString("comboBox1.Items5")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
-            // 
-            // addCounTextBox
-            // 
-            resources.ApplyResources(this.addCounTextBox, "addCounTextBox");
-            this.addCounTextBox.Name = "addCounTextBox";
-            this.addCounTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addCounTextBox_KeyPress);
-            // 
-            // labelCount
-            // 
-            resources.ApplyResources(this.labelCount, "labelCount");
-            this.labelCount.Name = "labelCount";
-            // 
-            // addCostTextBox
-            // 
-            resources.ApplyResources(this.addCostTextBox, "addCostTextBox");
-            this.addCostTextBox.Name = "addCostTextBox";
-            this.addCostTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addCostTextBox_KeyPress);
-            // 
-            // labelCost
-            // 
-            resources.ApplyResources(this.labelCost, "labelCost");
-            this.labelCost.Name = "labelCost";
-            // 
-            // addDimmsTextBox
-            // 
-            resources.ApplyResources(this.addDimmsTextBox, "addDimmsTextBox");
-            this.addDimmsTextBox.Name = "addDimmsTextBox";
-            // 
-            // labelDimms
-            // 
-            resources.ApplyResources(this.labelDimms, "labelDimms");
-            this.labelDimms.Name = "labelDimms";
-            // 
-            // labelElement
-            // 
-            resources.ApplyResources(this.labelElement, "labelElement");
-            this.labelElement.Name = "labelElement";
-            // 
-            // labelControl
-            // 
-            resources.ApplyResources(this.labelControl, "labelControl");
-            this.labelControl.Name = "labelControl";
-            // 
-            // labelPurpose
-            // 
-            resources.ApplyResources(this.labelPurpose, "labelPurpose");
-            this.labelPurpose.Name = "labelPurpose";
-            // 
-            // labelPlacing
-            // 
-            resources.ApplyResources(this.labelPlacing, "labelPlacing");
-            this.labelPlacing.Name = "labelPlacing";
-            // 
-            // labelSupply
-            // 
-            resources.ApplyResources(this.labelSupply, "labelSupply");
-            this.labelSupply.Name = "labelSupply";
-            // 
-            // labelPower
-            // 
-            resources.ApplyResources(this.labelPower, "labelPower");
-            this.labelPower.Name = "labelPower";
-            // 
-            // labelArea
-            // 
-            resources.ApplyResources(this.labelArea, "labelArea");
-            this.labelArea.Name = "labelArea";
-            // 
-            // addModelTextBox
-            // 
-            resources.ApplyResources(this.addModelTextBox, "addModelTextBox");
-            this.addModelTextBox.Name = "addModelTextBox";
-            // 
-            // labelModel
-            // 
-            resources.ApplyResources(this.labelModel, "labelModel");
-            this.labelModel.Name = "labelModel";
-            // 
-            // addManufacturerTextBox
-            // 
-            resources.ApplyResources(this.addManufacturerTextBox, "addManufacturerTextBox");
-            this.addManufacturerTextBox.Name = "addManufacturerTextBox";
-            // 
-            // labelManufacturer
-            // 
-            resources.ApplyResources(this.labelManufacturer, "labelManufacturer");
-            this.labelManufacturer.Name = "labelManufacturer";
-            // 
-            // addCancelButton
-            // 
-            resources.ApplyResources(this.addCancelButton, "addCancelButton");
-            this.addCancelButton.Name = "addCancelButton";
-            this.addCancelButton.UseVisualStyleBackColor = true;
-            this.addCancelButton.Click += new System.EventHandler(this.addCancelButton_Click);
-            // 
-            // addClearButton
-            // 
-            resources.ApplyResources(this.addClearButton, "addClearButton");
-            this.addClearButton.Name = "addClearButton";
-            this.addClearButton.UseVisualStyleBackColor = true;
-            this.addClearButton.Click += new System.EventHandler(this.addClearButton_Click);
-            // 
-            // addButton
-            // 
-            resources.ApplyResources(this.addButton, "addButton");
-            this.addButton.Name = "addButton";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // EditPanel
             // 
@@ -532,8 +250,6 @@
             this.EditPanel.Controls.Add(this.EditPurposeCombo);
             this.EditPanel.Controls.Add(this.label15);
             this.EditPanel.Controls.Add(this.label2);
-            this.EditPanel.Controls.Add(this.EditCount);
-            this.EditPanel.Controls.Add(this.label3);
             this.EditPanel.Controls.Add(this.EditCost);
             this.EditPanel.Controls.Add(this.label4);
             this.EditPanel.Controls.Add(this.EditDimms);
@@ -640,7 +356,9 @@
             resources.GetString("EditElementCombo.Items2"),
             resources.GetString("EditElementCombo.Items3"),
             resources.GetString("EditElementCombo.Items4"),
-            resources.GetString("EditElementCombo.Items5")});
+            resources.GetString("EditElementCombo.Items5"),
+            resources.GetString("EditElementCombo.Items6"),
+            resources.GetString("EditElementCombo.Items7")});
             resources.ApplyResources(this.EditElementCombo, "EditElementCombo");
             this.EditElementCombo.Name = "EditElementCombo";
             // 
@@ -664,17 +382,6 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            // 
-            // EditCount
-            // 
-            resources.ApplyResources(this.EditCount, "EditCount");
-            this.EditCount.Name = "EditCount";
-            this.EditCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.editCounTextBox_KeyPress);
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
             // 
             // EditCost
             // 
@@ -929,6 +636,8 @@
             // 
             // SearchPanel
             // 
+            this.SearchPanel.Controls.Add(this.label18);
+            this.SearchPanel.Controls.Add(this.label3);
             this.SearchPanel.Controls.Add(this.SearchManufactCombo);
             this.SearchPanel.Controls.Add(this.SearchAreaCombo);
             this.SearchPanel.Controls.Add(this.label16);
@@ -971,13 +680,348 @@
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
             // 
+            // toolStrip
+            // 
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddStripButton,
+            this.OpenStripButton,
+            this.SaveStripButton,
+            this.toolStripSeparator1,
+            this.EditStripButton,
+            this.DeleteStripButton,
+            this.SearchStripButton});
+            resources.ApplyResources(this.toolStrip, "toolStrip");
+            this.toolStrip.Name = "toolStrip";
+            // 
+            // AddStripButton
+            // 
+            resources.ApplyResources(this.AddStripButton, "AddStripButton");
+            this.AddStripButton.Name = "AddStripButton";
+            this.AddStripButton.Click += new System.EventHandler(this.AddStripButton_Click);
+            // 
+            // OpenStripButton
+            // 
+            resources.ApplyResources(this.OpenStripButton, "OpenStripButton");
+            this.OpenStripButton.Name = "OpenStripButton";
+            this.OpenStripButton.Click += new System.EventHandler(this.OpenStripButton_Click);
+            // 
+            // SaveStripButton
+            // 
+            resources.ApplyResources(this.SaveStripButton, "SaveStripButton");
+            this.SaveStripButton.Name = "SaveStripButton";
+            this.SaveStripButton.Click += new System.EventHandler(this.SaveStripButton_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // EditStripButton
+            // 
+            resources.ApplyResources(this.EditStripButton, "EditStripButton");
+            this.EditStripButton.Name = "EditStripButton";
+            this.EditStripButton.Click += new System.EventHandler(this.EditStripButton_Click);
+            // 
+            // DeleteStripButton
+            // 
+            resources.ApplyResources(this.DeleteStripButton, "DeleteStripButton");
+            this.DeleteStripButton.Name = "DeleteStripButton";
+            this.DeleteStripButton.Click += new System.EventHandler(this.DeleteStripButton_Click);
+            // 
+            // SearchStripButton
+            // 
+            resources.ApplyResources(this.SearchStripButton, "SearchStripButton");
+            this.SearchStripButton.Name = "SearchStripButton";
+            this.SearchStripButton.Click += new System.EventHandler(this.SearchStripButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listView);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // listView
+            // 
+            resources.ApplyResources(this.listView, "listView");
+            this.listView.HideSelection = false;
+            this.listView.Name = "listView";
+            this.listView.UseCompatibleStateImageBehavior = false;
+            // 
+            // addButton
+            // 
+            resources.ApplyResources(this.addButton, "addButton");
+            this.addButton.Name = "addButton";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // addClearButton
+            // 
+            resources.ApplyResources(this.addClearButton, "addClearButton");
+            this.addClearButton.Name = "addClearButton";
+            this.addClearButton.UseVisualStyleBackColor = true;
+            this.addClearButton.Click += new System.EventHandler(this.addClearButton_Click);
+            // 
+            // addCancelButton
+            // 
+            resources.ApplyResources(this.addCancelButton, "addCancelButton");
+            this.addCancelButton.Name = "addCancelButton";
+            this.addCancelButton.UseVisualStyleBackColor = true;
+            this.addCancelButton.Click += new System.EventHandler(this.addCancelButton_Click);
+            // 
+            // labelManufacturer
+            // 
+            resources.ApplyResources(this.labelManufacturer, "labelManufacturer");
+            this.labelManufacturer.Name = "labelManufacturer";
+            // 
+            // addManufacturerTextBox
+            // 
+            resources.ApplyResources(this.addManufacturerTextBox, "addManufacturerTextBox");
+            this.addManufacturerTextBox.Name = "addManufacturerTextBox";
+            // 
+            // labelModel
+            // 
+            resources.ApplyResources(this.labelModel, "labelModel");
+            this.labelModel.Name = "labelModel";
+            // 
+            // addModelTextBox
+            // 
+            resources.ApplyResources(this.addModelTextBox, "addModelTextBox");
+            this.addModelTextBox.Name = "addModelTextBox";
+            // 
+            // labelArea
+            // 
+            resources.ApplyResources(this.labelArea, "labelArea");
+            this.labelArea.Name = "labelArea";
+            // 
+            // labelPower
+            // 
+            resources.ApplyResources(this.labelPower, "labelPower");
+            this.labelPower.Name = "labelPower";
+            // 
+            // labelSupply
+            // 
+            resources.ApplyResources(this.labelSupply, "labelSupply");
+            this.labelSupply.Name = "labelSupply";
+            // 
+            // labelPlacing
+            // 
+            resources.ApplyResources(this.labelPlacing, "labelPlacing");
+            this.labelPlacing.Name = "labelPlacing";
+            // 
+            // labelPurpose
+            // 
+            resources.ApplyResources(this.labelPurpose, "labelPurpose");
+            this.labelPurpose.Name = "labelPurpose";
+            // 
+            // labelControl
+            // 
+            resources.ApplyResources(this.labelControl, "labelControl");
+            this.labelControl.Name = "labelControl";
+            // 
+            // labelElement
+            // 
+            resources.ApplyResources(this.labelElement, "labelElement");
+            this.labelElement.Name = "labelElement";
+            // 
+            // labelDimms
+            // 
+            resources.ApplyResources(this.labelDimms, "labelDimms");
+            this.labelDimms.Name = "labelDimms";
+            // 
+            // addDimmsTextBox
+            // 
+            resources.ApplyResources(this.addDimmsTextBox, "addDimmsTextBox");
+            this.addDimmsTextBox.Name = "addDimmsTextBox";
+            // 
+            // labelCost
+            // 
+            resources.ApplyResources(this.labelCost, "labelCost");
+            this.labelCost.Name = "labelCost";
+            // 
+            // addCostTextBox
+            // 
+            resources.ApplyResources(this.addCostTextBox, "addCostTextBox");
+            this.addCostTextBox.Name = "addCostTextBox";
+            this.addCostTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addCostTextBox_KeyPress);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3"),
+            resources.GetString("comboBox1.Items4"),
+            resources.GetString("comboBox1.Items5")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // labelSections
+            // 
+            resources.ApplyResources(this.labelSections, "labelSections");
+            this.labelSections.Name = "labelSections";
+            // 
+            // addPurposeCombo
+            // 
+            resources.ApplyResources(this.addPurposeCombo, "addPurposeCombo");
+            this.addPurposeCombo.FormattingEnabled = true;
+            this.addPurposeCombo.Items.AddRange(new object[] {
+            resources.GetString("addPurposeCombo.Items"),
+            resources.GetString("addPurposeCombo.Items1"),
+            resources.GetString("addPurposeCombo.Items2"),
+            resources.GetString("addPurposeCombo.Items3")});
+            this.addPurposeCombo.Name = "addPurposeCombo";
+            // 
+            // addElementCombo
+            // 
+            resources.ApplyResources(this.addElementCombo, "addElementCombo");
+            this.addElementCombo.FormattingEnabled = true;
+            this.addElementCombo.Items.AddRange(new object[] {
+            resources.GetString("addElementCombo.Items"),
+            resources.GetString("addElementCombo.Items1"),
+            resources.GetString("addElementCombo.Items2"),
+            resources.GetString("addElementCombo.Items3"),
+            resources.GetString("addElementCombo.Items4"),
+            resources.GetString("addElementCombo.Items5"),
+            resources.GetString("addElementCombo.Items6"),
+            resources.GetString("addElementCombo.Items7")});
+            this.addElementCombo.Name = "addElementCombo";
+            // 
+            // addSectCombo
+            // 
+            resources.ApplyResources(this.addSectCombo, "addSectCombo");
+            this.addSectCombo.FormattingEnabled = true;
+            this.addSectCombo.Items.AddRange(new object[] {
+            resources.GetString("addSectCombo.Items"),
+            resources.GetString("addSectCombo.Items1"),
+            resources.GetString("addSectCombo.Items2"),
+            resources.GetString("addSectCombo.Items3"),
+            resources.GetString("addSectCombo.Items4")});
+            this.addSectCombo.Name = "addSectCombo";
+            // 
+            // addPowerCombo
+            // 
+            resources.ApplyResources(this.addPowerCombo, "addPowerCombo");
+            this.addPowerCombo.FormattingEnabled = true;
+            this.addPowerCombo.Items.AddRange(new object[] {
+            resources.GetString("addPowerCombo.Items"),
+            resources.GetString("addPowerCombo.Items1"),
+            resources.GetString("addPowerCombo.Items2"),
+            resources.GetString("addPowerCombo.Items3"),
+            resources.GetString("addPowerCombo.Items4"),
+            resources.GetString("addPowerCombo.Items5"),
+            resources.GetString("addPowerCombo.Items6"),
+            resources.GetString("addPowerCombo.Items7"),
+            resources.GetString("addPowerCombo.Items8"),
+            resources.GetString("addPowerCombo.Items9"),
+            resources.GetString("addPowerCombo.Items10"),
+            resources.GetString("addPowerCombo.Items11"),
+            resources.GetString("addPowerCombo.Items12"),
+            resources.GetString("addPowerCombo.Items13")});
+            this.addPowerCombo.Name = "addPowerCombo";
+            this.addPowerCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addPowerCombo_KeyPress);
+            // 
+            // addSuplyCombo
+            // 
+            resources.ApplyResources(this.addSuplyCombo, "addSuplyCombo");
+            this.addSuplyCombo.FormattingEnabled = true;
+            this.addSuplyCombo.Items.AddRange(new object[] {
+            resources.GetString("addSuplyCombo.Items"),
+            resources.GetString("addSuplyCombo.Items1"),
+            resources.GetString("addSuplyCombo.Items2"),
+            resources.GetString("addSuplyCombo.Items3")});
+            this.addSuplyCombo.Name = "addSuplyCombo";
+            // 
+            // addPlacingCombo
+            // 
+            resources.ApplyResources(this.addPlacingCombo, "addPlacingCombo");
+            this.addPlacingCombo.FormattingEnabled = true;
+            this.addPlacingCombo.Items.AddRange(new object[] {
+            resources.GetString("addPlacingCombo.Items"),
+            resources.GetString("addPlacingCombo.Items1"),
+            resources.GetString("addPlacingCombo.Items2"),
+            resources.GetString("addPlacingCombo.Items3"),
+            resources.GetString("addPlacingCombo.Items4"),
+            resources.GetString("addPlacingCombo.Items5"),
+            resources.GetString("addPlacingCombo.Items6")});
+            this.addPlacingCombo.Name = "addPlacingCombo";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // addControlCombo
+            // 
+            resources.ApplyResources(this.addControlCombo, "addControlCombo");
+            this.addControlCombo.FormattingEnabled = true;
+            this.addControlCombo.Items.AddRange(new object[] {
+            resources.GetString("addControlCombo.Items"),
+            resources.GetString("addControlCombo.Items1"),
+            resources.GetString("addControlCombo.Items2"),
+            resources.GetString("addControlCombo.Items3")});
+            this.addControlCombo.Name = "addControlCombo";
+            // 
+            // addAreaTextBox
+            // 
+            resources.ApplyResources(this.addAreaTextBox, "addAreaTextBox");
+            this.addAreaTextBox.Name = "addAreaTextBox";
+            this.addAreaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addAreaTextBox_KeyPress);
+            // 
+            // AddPanel
+            // 
+            this.AddPanel.Controls.Add(this.addAreaTextBox);
+            this.AddPanel.Controls.Add(this.addControlCombo);
+            this.AddPanel.Controls.Add(this.label1);
+            this.AddPanel.Controls.Add(this.addPlacingCombo);
+            this.AddPanel.Controls.Add(this.addSuplyCombo);
+            this.AddPanel.Controls.Add(this.addPowerCombo);
+            this.AddPanel.Controls.Add(this.addSectCombo);
+            this.AddPanel.Controls.Add(this.addElementCombo);
+            this.AddPanel.Controls.Add(this.addPurposeCombo);
+            this.AddPanel.Controls.Add(this.labelSections);
+            this.AddPanel.Controls.Add(this.comboBox1);
+            this.AddPanel.Controls.Add(this.addCostTextBox);
+            this.AddPanel.Controls.Add(this.labelCost);
+            this.AddPanel.Controls.Add(this.addDimmsTextBox);
+            this.AddPanel.Controls.Add(this.labelDimms);
+            this.AddPanel.Controls.Add(this.labelElement);
+            this.AddPanel.Controls.Add(this.labelControl);
+            this.AddPanel.Controls.Add(this.labelPurpose);
+            this.AddPanel.Controls.Add(this.labelPlacing);
+            this.AddPanel.Controls.Add(this.labelSupply);
+            this.AddPanel.Controls.Add(this.labelPower);
+            this.AddPanel.Controls.Add(this.labelArea);
+            this.AddPanel.Controls.Add(this.addModelTextBox);
+            this.AddPanel.Controls.Add(this.labelModel);
+            this.AddPanel.Controls.Add(this.addManufacturerTextBox);
+            this.AddPanel.Controls.Add(this.labelManufacturer);
+            this.AddPanel.Controls.Add(this.addCancelButton);
+            this.AddPanel.Controls.Add(this.addClearButton);
+            this.AddPanel.Controls.Add(this.addButton);
+            resources.ApplyResources(this.AddPanel, "AddPanel");
+            this.AddPanel.Name = "AddPanel";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.SearchPanel);
-            this.Controls.Add(this.AddPanel);
             this.Controls.Add(this.EditPanel);
+            this.Controls.Add(this.AddPanel);
+            this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -987,13 +1031,15 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.AddPanel.ResumeLayout(false);
-            this.AddPanel.PerformLayout();
             this.EditPanel.ResumeLayout(false);
             this.EditPanel.PerformLayout();
             this.SearchPanel.ResumeLayout(false);
             this.SearchPanel.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.AddPanel.ResumeLayout(false);
+            this.AddPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1011,48 +1057,15 @@
         private System.Windows.Forms.ToolStripMenuItem EditMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem DeleteMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HelpMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem HowMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem AddNewMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel AddPanel;
         private System.Windows.Forms.Panel EditPanel;
         private System.Windows.Forms.Button editCancelButton;
         private System.Windows.Forms.Button editClearButton;
         private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.Label labelSections;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox addCounTextBox;
-        private System.Windows.Forms.Label labelCount;
-        private System.Windows.Forms.TextBox addCostTextBox;
-        private System.Windows.Forms.Label labelCost;
-        private System.Windows.Forms.TextBox addDimmsTextBox;
-        private System.Windows.Forms.Label labelDimms;
-        private System.Windows.Forms.Label labelElement;
-        private System.Windows.Forms.Label labelControl;
-        private System.Windows.Forms.Label labelPurpose;
-        private System.Windows.Forms.Label labelPlacing;
-        private System.Windows.Forms.Label labelSupply;
-        private System.Windows.Forms.Label labelPower;
-        private System.Windows.Forms.Label labelArea;
-        private System.Windows.Forms.TextBox addModelTextBox;
-        private System.Windows.Forms.Label labelModel;
-        private System.Windows.Forms.TextBox addManufacturerTextBox;
-        private System.Windows.Forms.Label labelManufacturer;
-        private System.Windows.Forms.Button addCancelButton;
-        private System.Windows.Forms.Button addClearButton;
-        private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.ComboBox addPlacingCombo;
-        private System.Windows.Forms.ComboBox addSuplyCombo;
-        private System.Windows.Forms.ComboBox addPowerCombo;
-        private System.Windows.Forms.ComboBox addSectCombo;
-        private System.Windows.Forms.ComboBox addElementCombo;
-        private System.Windows.Forms.ComboBox addPurposeCombo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox EditCount;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox EditCost;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox EditDimms;
@@ -1069,7 +1082,6 @@
         private System.Windows.Forms.TextBox EditManufacturer;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox EditPlacingCombo;
         private System.Windows.Forms.ComboBox EditSupplyCombo;
         private System.Windows.Forms.ComboBox EditPowerCombo;
@@ -1077,9 +1089,6 @@
         private System.Windows.Forms.ComboBox EditElementCombo;
         private System.Windows.Forms.ComboBox EditPurposeCombo;
         private System.Windows.Forms.ComboBox EditControlCombo;
-        private System.Windows.Forms.ComboBox addControlCombo;
-        private System.Windows.Forms.ListView listView;
-        private System.Windows.Forms.TextBox addAreaTextBox;
         private System.Windows.Forms.TextBox EditArea;
         private System.Windows.Forms.ToolStripMenuItem CloseMenuItem;
         private System.Windows.Forms.Button SearchClearButton;
@@ -1103,6 +1112,48 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox SearchManufactCombo;
         private System.Windows.Forms.ComboBox SearchAreaCombo;
+        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripButton AddStripButton;
+        private System.Windows.Forms.ToolStripButton OpenStripButton;
+        private System.Windows.Forms.ToolStripButton SaveStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton EditStripButton;
+        private System.Windows.Forms.ToolStripButton DeleteStripButton;
+        private System.Windows.Forms.ToolStripButton SearchStripButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button addClearButton;
+        private System.Windows.Forms.Button addCancelButton;
+        private System.Windows.Forms.Label labelManufacturer;
+        private System.Windows.Forms.TextBox addManufacturerTextBox;
+        private System.Windows.Forms.Label labelModel;
+        private System.Windows.Forms.TextBox addModelTextBox;
+        private System.Windows.Forms.Label labelArea;
+        private System.Windows.Forms.Label labelPower;
+        private System.Windows.Forms.Label labelSupply;
+        private System.Windows.Forms.Label labelPlacing;
+        private System.Windows.Forms.Label labelPurpose;
+        private System.Windows.Forms.Label labelControl;
+        private System.Windows.Forms.Label labelElement;
+        private System.Windows.Forms.Label labelDimms;
+        private System.Windows.Forms.TextBox addDimmsTextBox;
+        private System.Windows.Forms.Label labelCost;
+        private System.Windows.Forms.TextBox addCostTextBox;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label labelSections;
+        private System.Windows.Forms.ComboBox addPurposeCombo;
+        private System.Windows.Forms.ComboBox addElementCombo;
+        private System.Windows.Forms.ComboBox addSectCombo;
+        private System.Windows.Forms.ComboBox addPowerCombo;
+        private System.Windows.Forms.ComboBox addSuplyCombo;
+        private System.Windows.Forms.ComboBox addPlacingCombo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox addControlCombo;
+        private System.Windows.Forms.TextBox addAreaTextBox;
+        private System.Windows.Forms.Panel AddPanel;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -25,7 +25,6 @@ namespace HAS
         private string heating_element;
         private string dimensions;
         private double cost;
-        private int count;
         private int section_count;
 
         
@@ -94,11 +93,6 @@ namespace HAS
             get => cost;
             set => cost = value;
         }
-        public int Count
-        {
-            get => count;
-            set => count = value;
-        }
         public int Section_count
         {
             get => section_count;
@@ -108,7 +102,7 @@ namespace HAS
         public Heater()
         { }
         public Heater(string heatertype, string manufacturer, string model, string service_area, int power, string power_suply, string placing,
-            string purpose, string control, string heating_element, string dimensions, double cost, int count)
+            string purpose, string control, string heating_element, string dimensions, double cost)
         {
             Random ran = new Random((Int32)DateTime.Now.Ticks);
             Id = ran.Next(1000,9999);
@@ -124,12 +118,11 @@ namespace HAS
             Heating_element = heating_element;
             Dimensions = dimensions;
             Cost = cost;
-            Count = count;
         }
         public virtual string OutputInfo()
         {
             return $"{Id}*{HeaterType}*{Manufacturer}*{Model}*{Service_area}*{Power}*{Power_suply}*{Placing}*" +
-                $"{Purpose}*{Control}*{Heating_element}*{Dimensions}*{Cost}*{Count}*";
+                $"{Purpose}*{Control}*{Heating_element}*{Dimensions}*{Cost}*";
         }
     }
 }
