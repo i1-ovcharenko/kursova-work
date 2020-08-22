@@ -12,7 +12,8 @@ namespace HAS
     [Serializable]
     public class Heater
     {
-        private string id;
+        private int id;
+        private string heaterType;
         private string manufacturer;
         private string model;
         private string service_area;
@@ -27,10 +28,16 @@ namespace HAS
         private int count;
         private int section_count;
 
-        public int Section_count
+        
+        public int Id
         {
-            get => section_count;
-            set => section_count = value;
+            get => id;
+            set => id = value;
+        }
+        public string HeaterType
+        {
+            get => heaterType;
+            set => heaterType = value;
         }
         public string Manufacturer
         {
@@ -92,19 +99,20 @@ namespace HAS
             get => count;
             set => count = value;
         }
-        public string Id
+        public int Section_count
         {
-            get => id;
-            set => id = value;
+            get => section_count;
+            set => section_count = value;
         }
 
         public Heater()
         { }
-        public Heater(string manufacturer, string model, string service_area, int power, string power_suply, string placing,
+        public Heater(string heatertype, string manufacturer, string model, string service_area, int power, string power_suply, string placing,
             string purpose, string control, string heating_element, string dimensions, double cost, int count)
         {
             Random ran = new Random((Int32)DateTime.Now.Ticks);
-            Id = Convert.ToString(ran.Next(1000,9999));
+            Id = ran.Next(1000,9999);
+            HeaterType = heatertype;
             Manufacturer = manufacturer;
             Model = model;
             Service_area = service_area;
@@ -120,7 +128,7 @@ namespace HAS
         }
         public virtual string OutputInfo()
         {
-            return $"{Id}*{Manufacturer}*{Model}*{Service_area}*{Power}*{Power_suply}*{Placing}*" +
+            return $"{Id}*{HeaterType}*{Manufacturer}*{Model}*{Service_area}*{Power}*{Power_suply}*{Placing}*" +
                 $"{Purpose}*{Control}*{Heating_element}*{Dimensions}*{Cost}*{Count}*";
         }
     }

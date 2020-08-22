@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenFileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CloseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveFileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveAsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.listView = new System.Windows.Forms.ListView();
             this.AddPanel = new System.Windows.Forms.Panel();
+            this.addAreaTextBox = new System.Windows.Forms.TextBox();
             this.addControlCombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.addPlacingCombo = new System.Windows.Forms.ComboBox();
@@ -55,7 +57,6 @@
             this.addSectCombo = new System.Windows.Forms.ComboBox();
             this.addElementCombo = new System.Windows.Forms.ComboBox();
             this.addPurposeCombo = new System.Windows.Forms.ComboBox();
-            this.addAreaCombo = new System.Windows.Forms.ComboBox();
             this.labelSections = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.addCounTextBox = new System.Windows.Forms.TextBox();
@@ -79,6 +80,7 @@
             this.addClearButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
+            this.EditArea = new System.Windows.Forms.TextBox();
             this.EditControlCombo = new System.Windows.Forms.ComboBox();
             this.EditPlacingCombo = new System.Windows.Forms.ComboBox();
             this.EditSupplyCombo = new System.Windows.Forms.ComboBox();
@@ -86,7 +88,6 @@
             this.EditSectionCombo = new System.Windows.Forms.ComboBox();
             this.EditElementCombo = new System.Windows.Forms.ComboBox();
             this.EditPurposeCombo = new System.Windows.Forms.ComboBox();
-            this.EditAreaCombo = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EditCount = new System.Windows.Forms.TextBox();
@@ -109,10 +110,32 @@
             this.editCancelButton = new System.Windows.Forms.Button();
             this.editClearButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
+            this.SearchClearButton = new System.Windows.Forms.Button();
+            this.SearchCancelButton = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.SearchTypeCombo = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.SearchPurposeCombo = new System.Windows.Forms.ComboBox();
+            this.SearchSectCombo = new System.Windows.Forms.ComboBox();
+            this.SearchPowerCombo = new System.Windows.Forms.ComboBox();
+            this.SearchSupplyCombo = new System.Windows.Forms.ComboBox();
+            this.SearchPlacingCombo = new System.Windows.Forms.ComboBox();
+            this.SearchControlCombo = new System.Windows.Forms.ComboBox();
+            this.SearchPanel = new System.Windows.Forms.Panel();
+            this.SearchManufactCombo = new System.Windows.Forms.ComboBox();
+            this.SearchAreaCombo = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.AddPanel.SuspendLayout();
             this.EditPanel.SuspendLayout();
+            this.SearchPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -128,6 +151,7 @@
             // 
             this.FileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenFileMenuItem,
+            this.CloseMenuItem,
             this.SaveFileMenuItem,
             this.SaveAsMenuItem});
             this.FileMenuItem.Name = "FileMenuItem";
@@ -138,6 +162,12 @@
             this.OpenFileMenuItem.Name = "OpenFileMenuItem";
             resources.ApplyResources(this.OpenFileMenuItem, "OpenFileMenuItem");
             this.OpenFileMenuItem.Click += new System.EventHandler(this.OpenFileMenuItem_Click);
+            // 
+            // CloseMenuItem
+            // 
+            this.CloseMenuItem.Name = "CloseMenuItem";
+            resources.ApplyResources(this.CloseMenuItem, "CloseMenuItem");
+            this.CloseMenuItem.Click += new System.EventHandler(this.CloseMenuItem_Click);
             // 
             // SaveFileMenuItem
             // 
@@ -224,6 +254,7 @@
             // 
             // AddPanel
             // 
+            this.AddPanel.Controls.Add(this.addAreaTextBox);
             this.AddPanel.Controls.Add(this.addControlCombo);
             this.AddPanel.Controls.Add(this.label1);
             this.AddPanel.Controls.Add(this.addPlacingCombo);
@@ -232,7 +263,6 @@
             this.AddPanel.Controls.Add(this.addSectCombo);
             this.AddPanel.Controls.Add(this.addElementCombo);
             this.AddPanel.Controls.Add(this.addPurposeCombo);
-            this.AddPanel.Controls.Add(this.addAreaCombo);
             this.AddPanel.Controls.Add(this.labelSections);
             this.AddPanel.Controls.Add(this.comboBox1);
             this.AddPanel.Controls.Add(this.addCounTextBox);
@@ -257,6 +287,12 @@
             this.AddPanel.Controls.Add(this.addButton);
             resources.ApplyResources(this.AddPanel, "AddPanel");
             this.AddPanel.Name = "AddPanel";
+            // 
+            // addAreaTextBox
+            // 
+            resources.ApplyResources(this.addAreaTextBox, "addAreaTextBox");
+            this.addAreaTextBox.Name = "addAreaTextBox";
+            this.addAreaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addAreaTextBox_KeyPress);
             // 
             // addControlCombo
             // 
@@ -319,6 +355,7 @@
             resources.GetString("addPowerCombo.Items12"),
             resources.GetString("addPowerCombo.Items13")});
             this.addPowerCombo.Name = "addPowerCombo";
+            this.addPowerCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addPowerCombo_KeyPress);
             // 
             // addSectCombo
             // 
@@ -355,12 +392,6 @@
             resources.GetString("addPurposeCombo.Items2"),
             resources.GetString("addPurposeCombo.Items3")});
             this.addPurposeCombo.Name = "addPurposeCombo";
-            // 
-            // addAreaCombo
-            // 
-            resources.ApplyResources(this.addAreaCombo, "addAreaCombo");
-            this.addAreaCombo.FormattingEnabled = true;
-            this.addAreaCombo.Name = "addAreaCombo";
             // 
             // labelSections
             // 
@@ -491,6 +522,7 @@
             // 
             // EditPanel
             // 
+            this.EditPanel.Controls.Add(this.EditArea);
             this.EditPanel.Controls.Add(this.EditControlCombo);
             this.EditPanel.Controls.Add(this.EditPlacingCombo);
             this.EditPanel.Controls.Add(this.EditSupplyCombo);
@@ -498,7 +530,6 @@
             this.EditPanel.Controls.Add(this.EditSectionCombo);
             this.EditPanel.Controls.Add(this.EditElementCombo);
             this.EditPanel.Controls.Add(this.EditPurposeCombo);
-            this.EditPanel.Controls.Add(this.EditAreaCombo);
             this.EditPanel.Controls.Add(this.label15);
             this.EditPanel.Controls.Add(this.label2);
             this.EditPanel.Controls.Add(this.EditCount);
@@ -523,6 +554,12 @@
             this.EditPanel.Controls.Add(this.EditButton);
             resources.ApplyResources(this.EditPanel, "EditPanel");
             this.EditPanel.Name = "EditPanel";
+            // 
+            // EditArea
+            // 
+            resources.ApplyResources(this.EditArea, "EditArea");
+            this.EditArea.Name = "EditArea";
+            this.EditArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EditArea_KeyPress);
             // 
             // EditControlCombo
             // 
@@ -580,6 +617,7 @@
             resources.GetString("EditPowerCombo.Items13")});
             resources.ApplyResources(this.EditPowerCombo, "EditPowerCombo");
             this.EditPowerCombo.Name = "EditPowerCombo";
+            this.EditPowerCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EditPowerCombo_KeyPress);
             // 
             // EditSectionCombo
             // 
@@ -616,12 +654,6 @@
             resources.GetString("EditPurposeCombo.Items3")});
             resources.ApplyResources(this.EditPurposeCombo, "EditPurposeCombo");
             this.EditPurposeCombo.Name = "EditPurposeCombo";
-            // 
-            // EditAreaCombo
-            // 
-            this.EditAreaCombo.FormattingEnabled = true;
-            resources.ApplyResources(this.EditAreaCombo, "EditAreaCombo");
-            this.EditAreaCombo.Name = "EditAreaCombo";
             // 
             // label15
             // 
@@ -741,10 +773,209 @@
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
+            // SearchClearButton
+            // 
+            resources.ApplyResources(this.SearchClearButton, "SearchClearButton");
+            this.SearchClearButton.Name = "SearchClearButton";
+            this.SearchClearButton.UseVisualStyleBackColor = true;
+            this.SearchClearButton.Click += new System.EventHandler(this.SearchClearButton_Click);
+            // 
+            // SearchCancelButton
+            // 
+            resources.ApplyResources(this.SearchCancelButton, "SearchCancelButton");
+            this.SearchCancelButton.Name = "SearchCancelButton";
+            this.SearchCancelButton.UseVisualStyleBackColor = true;
+            this.SearchCancelButton.Click += new System.EventHandler(this.SearchCancelButton_Click);
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // SearchTypeCombo
+            // 
+            this.SearchTypeCombo.FormattingEnabled = true;
+            this.SearchTypeCombo.Items.AddRange(new object[] {
+            resources.GetString("SearchTypeCombo.Items"),
+            resources.GetString("SearchTypeCombo.Items1"),
+            resources.GetString("SearchTypeCombo.Items2"),
+            resources.GetString("SearchTypeCombo.Items3"),
+            resources.GetString("SearchTypeCombo.Items4"),
+            resources.GetString("SearchTypeCombo.Items5")});
+            resources.ApplyResources(this.SearchTypeCombo, "SearchTypeCombo");
+            this.SearchTypeCombo.Name = "SearchTypeCombo";
+            this.SearchTypeCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchTypeCombo_KeyPress);
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // SearchPurposeCombo
+            // 
+            this.SearchPurposeCombo.FormattingEnabled = true;
+            this.SearchPurposeCombo.Items.AddRange(new object[] {
+            resources.GetString("SearchPurposeCombo.Items"),
+            resources.GetString("SearchPurposeCombo.Items1"),
+            resources.GetString("SearchPurposeCombo.Items2"),
+            resources.GetString("SearchPurposeCombo.Items3")});
+            resources.ApplyResources(this.SearchPurposeCombo, "SearchPurposeCombo");
+            this.SearchPurposeCombo.Name = "SearchPurposeCombo";
+            this.SearchPurposeCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchPurposeCombo_KeyPress);
+            // 
+            // SearchSectCombo
+            // 
+            this.SearchSectCombo.FormattingEnabled = true;
+            this.SearchSectCombo.Items.AddRange(new object[] {
+            resources.GetString("SearchSectCombo.Items"),
+            resources.GetString("SearchSectCombo.Items1"),
+            resources.GetString("SearchSectCombo.Items2"),
+            resources.GetString("SearchSectCombo.Items3"),
+            resources.GetString("SearchSectCombo.Items4")});
+            resources.ApplyResources(this.SearchSectCombo, "SearchSectCombo");
+            this.SearchSectCombo.Name = "SearchSectCombo";
+            this.SearchSectCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchSectCombo_KeyPress);
+            // 
+            // SearchPowerCombo
+            // 
+            this.SearchPowerCombo.FormattingEnabled = true;
+            this.SearchPowerCombo.Items.AddRange(new object[] {
+            resources.GetString("SearchPowerCombo.Items"),
+            resources.GetString("SearchPowerCombo.Items1"),
+            resources.GetString("SearchPowerCombo.Items2"),
+            resources.GetString("SearchPowerCombo.Items3"),
+            resources.GetString("SearchPowerCombo.Items4"),
+            resources.GetString("SearchPowerCombo.Items5"),
+            resources.GetString("SearchPowerCombo.Items6"),
+            resources.GetString("SearchPowerCombo.Items7"),
+            resources.GetString("SearchPowerCombo.Items8"),
+            resources.GetString("SearchPowerCombo.Items9"),
+            resources.GetString("SearchPowerCombo.Items10"),
+            resources.GetString("SearchPowerCombo.Items11"),
+            resources.GetString("SearchPowerCombo.Items12"),
+            resources.GetString("SearchPowerCombo.Items13")});
+            resources.ApplyResources(this.SearchPowerCombo, "SearchPowerCombo");
+            this.SearchPowerCombo.Name = "SearchPowerCombo";
+            this.SearchPowerCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchPowerCombo_KeyPress);
+            // 
+            // SearchSupplyCombo
+            // 
+            this.SearchSupplyCombo.FormattingEnabled = true;
+            this.SearchSupplyCombo.Items.AddRange(new object[] {
+            resources.GetString("SearchSupplyCombo.Items"),
+            resources.GetString("SearchSupplyCombo.Items1"),
+            resources.GetString("SearchSupplyCombo.Items2"),
+            resources.GetString("SearchSupplyCombo.Items3")});
+            resources.ApplyResources(this.SearchSupplyCombo, "SearchSupplyCombo");
+            this.SearchSupplyCombo.Name = "SearchSupplyCombo";
+            this.SearchSupplyCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchSupplyCombo_KeyPress);
+            // 
+            // SearchPlacingCombo
+            // 
+            this.SearchPlacingCombo.FormattingEnabled = true;
+            this.SearchPlacingCombo.Items.AddRange(new object[] {
+            resources.GetString("SearchPlacingCombo.Items"),
+            resources.GetString("SearchPlacingCombo.Items1"),
+            resources.GetString("SearchPlacingCombo.Items2"),
+            resources.GetString("SearchPlacingCombo.Items3"),
+            resources.GetString("SearchPlacingCombo.Items4"),
+            resources.GetString("SearchPlacingCombo.Items5"),
+            resources.GetString("SearchPlacingCombo.Items6")});
+            resources.ApplyResources(this.SearchPlacingCombo, "SearchPlacingCombo");
+            this.SearchPlacingCombo.Name = "SearchPlacingCombo";
+            this.SearchPlacingCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchPlacingCombo_KeyPress);
+            // 
+            // SearchControlCombo
+            // 
+            this.SearchControlCombo.FormattingEnabled = true;
+            this.SearchControlCombo.Items.AddRange(new object[] {
+            resources.GetString("SearchControlCombo.Items"),
+            resources.GetString("SearchControlCombo.Items1"),
+            resources.GetString("SearchControlCombo.Items2"),
+            resources.GetString("SearchControlCombo.Items3")});
+            resources.ApplyResources(this.SearchControlCombo, "SearchControlCombo");
+            this.SearchControlCombo.Name = "SearchControlCombo";
+            this.SearchControlCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchControlCombo_KeyPress);
+            // 
+            // SearchPanel
+            // 
+            this.SearchPanel.Controls.Add(this.SearchManufactCombo);
+            this.SearchPanel.Controls.Add(this.SearchAreaCombo);
+            this.SearchPanel.Controls.Add(this.label16);
+            this.SearchPanel.Controls.Add(this.SearchControlCombo);
+            this.SearchPanel.Controls.Add(this.SearchPlacingCombo);
+            this.SearchPanel.Controls.Add(this.SearchSupplyCombo);
+            this.SearchPanel.Controls.Add(this.SearchPowerCombo);
+            this.SearchPanel.Controls.Add(this.SearchSectCombo);
+            this.SearchPanel.Controls.Add(this.SearchPurposeCombo);
+            this.SearchPanel.Controls.Add(this.label17);
+            this.SearchPanel.Controls.Add(this.SearchTypeCombo);
+            this.SearchPanel.Controls.Add(this.label22);
+            this.SearchPanel.Controls.Add(this.label23);
+            this.SearchPanel.Controls.Add(this.label24);
+            this.SearchPanel.Controls.Add(this.label25);
+            this.SearchPanel.Controls.Add(this.label26);
+            this.SearchPanel.Controls.Add(this.label27);
+            this.SearchPanel.Controls.Add(this.label29);
+            this.SearchPanel.Controls.Add(this.SearchCancelButton);
+            this.SearchPanel.Controls.Add(this.SearchClearButton);
+            resources.ApplyResources(this.SearchPanel, "SearchPanel");
+            this.SearchPanel.Name = "SearchPanel";
+            // 
+            // SearchManufactCombo
+            // 
+            this.SearchManufactCombo.FormattingEnabled = true;
+            resources.ApplyResources(this.SearchManufactCombo, "SearchManufactCombo");
+            this.SearchManufactCombo.Name = "SearchManufactCombo";
+            this.SearchManufactCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchManufactCombo_KeyPress);
+            // 
+            // SearchAreaCombo
+            // 
+            this.SearchAreaCombo.FormattingEnabled = true;
+            resources.ApplyResources(this.SearchAreaCombo, "SearchAreaCombo");
+            this.SearchAreaCombo.Name = "SearchAreaCombo";
+            this.SearchAreaCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchAreaCombo_KeyPress);
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.SearchPanel);
             this.Controls.Add(this.AddPanel);
             this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.panel1);
@@ -761,6 +992,8 @@
             this.AddPanel.PerformLayout();
             this.EditPanel.ResumeLayout(false);
             this.EditPanel.PerformLayout();
+            this.SearchPanel.ResumeLayout(false);
+            this.SearchPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -817,7 +1050,6 @@
         private System.Windows.Forms.ComboBox addSectCombo;
         private System.Windows.Forms.ComboBox addElementCombo;
         private System.Windows.Forms.ComboBox addPurposeCombo;
-        private System.Windows.Forms.ComboBox addAreaCombo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox EditCount;
         private System.Windows.Forms.Label label3;
@@ -844,10 +1076,33 @@
         private System.Windows.Forms.ComboBox EditSectionCombo;
         private System.Windows.Forms.ComboBox EditElementCombo;
         private System.Windows.Forms.ComboBox EditPurposeCombo;
-        private System.Windows.Forms.ComboBox EditAreaCombo;
         private System.Windows.Forms.ComboBox EditControlCombo;
         private System.Windows.Forms.ComboBox addControlCombo;
         private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.TextBox addAreaTextBox;
+        private System.Windows.Forms.TextBox EditArea;
+        private System.Windows.Forms.ToolStripMenuItem CloseMenuItem;
+        private System.Windows.Forms.Button SearchClearButton;
+        private System.Windows.Forms.Button SearchCancelButton;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox SearchTypeCombo;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox SearchPurposeCombo;
+        private System.Windows.Forms.ComboBox SearchSectCombo;
+        private System.Windows.Forms.ComboBox SearchPowerCombo;
+        private System.Windows.Forms.ComboBox SearchSupplyCombo;
+        private System.Windows.Forms.ComboBox SearchPlacingCombo;
+        private System.Windows.Forms.ComboBox SearchControlCombo;
+        private System.Windows.Forms.Panel SearchPanel;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox SearchManufactCombo;
+        private System.Windows.Forms.ComboBox SearchAreaCombo;
     }
 }
 

@@ -8,3 +8,6 @@ D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Debug\
 D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Debug\HAS.csproj.CoreCompileInputs.cache
 D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Debug\HAS.exe
 D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Debug\HAS.pdb
+D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\bin\Debug\uk-UA\HAS.resources.dll
+D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Debug\HAS.Form1.uk-UA.resources
+D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Debug\uk-UA\HAS.resources.dll
