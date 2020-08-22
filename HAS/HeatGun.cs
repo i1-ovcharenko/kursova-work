@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace HAS
 {
-    class HeatGun : Heater
+    [Serializable]
+    public class HeatGun : Heater
     {
         public HeatGun() { }
-        public HeatGun(string manufacturer, string model, int service_area, int power, string power_suply, string placing,
+        public HeatGun(string manufacturer, string model, string service_area, int power, string power_suply, string placing,
             string purpose, string control, string heating_element, string dimensions, double cost, int count) :
             base(manufacturer, model, service_area, power, power_suply, placing, purpose, control, heating_element, dimensions, cost, count)
         {
 
         }
-        public HeatGun(string filestring) : base(filestring)
+        public override string OutputInfo()
         {
-
+            return base.OutputInfo();
         }
     }
 }

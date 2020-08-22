@@ -1,12 +1,21 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 namespace HAS
 {
-    abstract class Heater
+    [XmlInclude(typeof(OilRadiator))]
+    [XmlInclude(typeof(FanHeater))]
+    [XmlInclude(typeof(InfraRedHeater))]
+    [XmlInclude(typeof(CeramicPanel))]
+    [XmlInclude(typeof(HeatGun))]
+    [XmlInclude(typeof(Convector))]
+    [Serializable]
+    public class Heater
     {
+        private string id;
         private string manufacturer;
         private string model;
-        private int service_area;
+        private string service_area;
         private int power;
         private string power_suply;
         private string placing;
@@ -16,7 +25,13 @@ namespace HAS
         private string dimensions;
         private double cost;
         private int count;
+        private int section_count;
 
+        public int Section_count
+        {
+            get => section_count;
+            set => section_count = value;
+        }
         public string Manufacturer
         {
             get => manufacturer;
@@ -27,7 +42,7 @@ namespace HAS
             get => model;
             set => model = value;
         }
-        public int Service_area
+        public string Service_area
         {
             get => service_area;
             set => service_area = value;
@@ -77,12 +92,19 @@ namespace HAS
             get => count;
             set => count = value;
         }
+        public string Id
+        {
+            get => id;
+            set => id = value;
+        }
 
         public Heater()
         { }
-        public Heater(string manufacturer, string model,int service_area, int power, string power_suply, string placing,
+        public Heater(string manufacturer, string model, string service_area, int power, string power_suply, string placing,
             string purpose, string control, string heating_element, string dimensions, double cost, int count)
         {
+            Random ran = new Random((Int32)DateTime.Now.Ticks);
+            Id = Convert.ToString(ran.Next(1000,9999));
             Manufacturer = manufacturer;
             Model = model;
             Service_area = service_area;
@@ -96,9 +118,10 @@ namespace HAS
             Cost = cost;
             Count = count;
         }
-        public Heater(string filestring)
+        public virtual string OutputInfo()
         {
-            //--------------------------
+            return $"{Id}*{Manufacturer}*{Model}*{Service_area}*{Power}*{Power_suply}*{Placing}*" +
+                $"{Purpose}*{Control}*{Heating_element}*{Dimensions}*{Cost}*{Count}*";
         }
     }
 }
