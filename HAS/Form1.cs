@@ -9,7 +9,6 @@ namespace HAS
 {
     public partial class Form1 : Form
     {
-        Heater heater = new Heater();
         List<Heater> heaters = new List<Heater>();
 
         string fileName = "";//шлях до файлу для читання/запису
@@ -73,6 +72,7 @@ namespace HAS
                     {
                         var newHeater = xmlFormatter.Deserialize(fs) as List<Heater>;
                         heaters = newHeater;
+                        fs.Close();
                     }
                     fileName = openFileDialog1.FileName;
                     ShowDataInList();
@@ -92,6 +92,7 @@ namespace HAS
                 using (FileStream fs = new FileStream(fileName, FileMode.Create))
                 {
                     formatter.Serialize(fs, heaters);
+                    fs.Close();
                 }
             }
             else
@@ -115,6 +116,7 @@ namespace HAS
                 using (FileStream fs = new FileStream(SaveFD.FileName, FileMode.CreateNew))
                 {
                     formatter.Serialize(fs, heaters);
+                    fs.Close();
                 }
                 fileName = SaveFD.FileName;
             }
@@ -146,7 +148,7 @@ namespace HAS
 
         private void EditMenuItem1_Click(object sender, EventArgs e)
         {//відкриття полів для редагування вибраних даних
-            if (listView.SelectedItems.Count > 0)
+            if (listView.SelectedItems.Count == 1)
             {
                 Size = new Size(1320, Size.Height);
                 AddPanel.Visible = false;
@@ -160,7 +162,7 @@ namespace HAS
                         EditModel.Text = heat.Model;
                         EditArea.Text = heat.Service_area;
                         EditPowerCombo.Text = Convert.ToString(heat.Power);
-                        EditSupplyCombo.Text = heat.Power_suply;
+                        EditSupplyCombo.Text = heat.Power_supply;
                         EditPlacingCombo.Text = heat.Placing;
                         EditPurposeCombo.Text = heat.Purpose;
                         EditControlCombo.Text = heat.Control;
@@ -172,12 +174,12 @@ namespace HAS
                 }//при редагуванні не можливо вибрати інший рядок з таблиці
                 listView.Enabled = false;
             } else
-                MessageBox.Show("Виберіть елемент для редагування!");
+                MessageBox.Show("Виберіть 1 елемент для редагування!");
         }
 
         private void DeleteMenuItem_Click(object sender, EventArgs e)
         {//видалення вибраного запису
-            if (listView.SelectedItems.Count != 0)
+            if (listView.SelectedItems.Count == 1)
             {
                 DialogResult dialogRes = MessageBox.Show("Ви дійсно бажаєте видалити вибраний запис?",
                     "Видалення запису", MessageBoxButtons.YesNo);
@@ -187,7 +189,7 @@ namespace HAS
                     listView.Items.RemoveAt(listView.SelectedItems[0].Index);
                 }                
             }else
-                MessageBox.Show("Виберіть елемент для видалення");
+                MessageBox.Show("Виберіть 1 елемент для видалення");
         }
 
         private void AboutMenuItem_Click(object sender, EventArgs e)
@@ -286,7 +288,6 @@ namespace HAS
                 if (comboBox1.Text == "Тепловентилятор")
                 {
                     heaters.Add(new FanHeater(
-                        comboBox1.Text,
                         addManufacturerTextBox.Text,
                         addModelTextBox.Text,
                         addAreaTextBox.Text,
@@ -302,7 +303,6 @@ namespace HAS
                 else if (comboBox1.Text == "Інфрачервоний обігрівач")
                 {
                     heaters.Add(new InfraRedHeater(
-                        comboBox1.Text,
                         addManufacturerTextBox.Text,
                         addModelTextBox.Text,
                         addAreaTextBox.Text,
@@ -318,7 +318,6 @@ namespace HAS
                 else if (comboBox1.Text == "Конвектор")
                 {
                     heaters.Add(new Convector(
-                        comboBox1.Text,
                         addManufacturerTextBox.Text,
                         addModelTextBox.Text,
                         addAreaTextBox.Text,
@@ -334,7 +333,6 @@ namespace HAS
                 else if (comboBox1.Text == "Масляний радіатор" && addSectCombo.Text != "")
                 {
                     heaters.Add(new OilRadiator(
-                        comboBox1.Text,
                         addManufacturerTextBox.Text,
                         addModelTextBox.Text,
                         addAreaTextBox.Text,
@@ -351,7 +349,6 @@ namespace HAS
                 else if (comboBox1.Text == "Керамічна панель")
                 {
                     heaters.Add(new CeramicPanel(
-                        comboBox1.Text,
                         addManufacturerTextBox.Text,
                         addModelTextBox.Text,
                         addAreaTextBox.Text,
@@ -367,7 +364,6 @@ namespace HAS
                 else if (comboBox1.Text == "Теплова гармата")
                 {
                     heaters.Add(new HeatGun(
-                        comboBox1.Text,
                         addManufacturerTextBox.Text,
                         addModelTextBox.Text,
                         addAreaTextBox.Text,
@@ -402,13 +398,13 @@ namespace HAS
                         heat.Model = EditModel.Text;
                         heat.Service_area = EditArea.Text;
                         heat.Power = Convert.ToInt32(EditPowerCombo.Text);
-                        heat.Power_suply = EditSupplyCombo.Text;
+                        heat.Power_supply = EditSupplyCombo.Text;
                         heat.Placing = EditPlacingCombo.Text;
                         heat.Purpose = EditPurposeCombo.Text;
                         heat.Control = EditControlCombo.Text;
                         heat.Heating_element = EditElementCombo.Text;
                         heat.Dimensions = EditDimms.Text;
-                        heat.Cost = Convert.ToInt32(EditCost.Text);
+                        heat.Cost = Convert.ToDouble(EditCost.Text);
                         heat.Section_count = Convert.ToInt32(EditSectionCombo.Text);
                     }
                 }
@@ -477,7 +473,7 @@ namespace HAS
                     listView.Items.Clear();
                     foreach(Heater heat in heaters)
                     {
-                        if(heat.HeaterType == SearchTypeCombo.Text)
+                        if(heat.Heater_type == SearchTypeCombo.Text)
                         {
                             string[] split = heat.OutputInfo().Split(new Char[] { '*' });
                             ListViewItem item = new ListViewItem(split);
@@ -569,7 +565,7 @@ namespace HAS
                     listView.Items.Clear();
                     foreach (Heater heat in heaters)
                     {
-                        if (heat.Power_suply == SearchSupplyCombo.Text)
+                        if (heat.Power_supply == SearchSupplyCombo.Text)
                         {
                             string[] split = heat.OutputInfo().Split(new Char[] { '*' });
                             ListViewItem item = new ListViewItem(split);
@@ -670,7 +666,7 @@ namespace HAS
             }
             e.Handled = true;
         }
-        //дублювання основних операцій з MenuStrip ToolStrip
+        //дублювання основних операцій з MenuStrip в ToolStrip
         private void AddStripButton_Click(object sender, EventArgs e)
         {
             forAction action = AddNewMenuItem_Click;

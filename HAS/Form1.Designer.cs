@@ -91,6 +91,8 @@
             this.SearchPlacingCombo = new System.Windows.Forms.ComboBox();
             this.SearchControlCombo = new System.Windows.Forms.ComboBox();
             this.SearchPanel = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SearchManufactCombo = new System.Windows.Forms.ComboBox();
             this.SearchAreaCombo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -134,8 +136,6 @@
             this.addControlCombo = new System.Windows.Forms.ComboBox();
             this.addAreaTextBox = new System.Windows.Forms.TextBox();
             this.AddPanel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.EditPanel.SuspendLayout();
             this.SearchPanel.SuspendLayout();
@@ -661,6 +661,16 @@
             resources.ApplyResources(this.SearchPanel, "SearchPanel");
             this.SearchPanel.Name = "SearchPanel";
             // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
             // SearchManufactCombo
             // 
             this.SearchManufactCombo.FormattingEnabled = true;
@@ -1004,23 +1014,13 @@
             resources.ApplyResources(this.AddPanel, "AddPanel");
             this.AddPanel.Name = "AddPanel";
             // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label18
-            // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.SearchPanel);
             this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.AddPanel);
+            this.Controls.Add(this.SearchPanel);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);

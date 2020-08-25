@@ -10,3 +10,4 @@ D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Releas
 D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Release\uk-UA\HAS.resources.dll
 D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Release\HAS.exe
 D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Release\HAS.pdb
+D:\Шлакоблокунь 2\сКС-19\Heaters accounting system\HAS\obj\Release\HAS.csprojAssemblyReference.cache

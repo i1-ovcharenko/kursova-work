@@ -121,17 +121,71 @@
     <value>26, 1</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="OpenFileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="OpenFileMenuItem.Text" xml:space="preserve">
+    <value>Відкрити</value>
+  </data>
+  <data name="CloseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="CloseMenuItem.Text" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="SaveFileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="SaveFileMenuItem.Text" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="SaveAsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="SaveAsMenuItem.Text" xml:space="preserve">
+    <value>Зберегти як..</value>
+  </data>
   <data name="FileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
   </data>
   <data name="FileMenuItem.Text" xml:space="preserve">
     <value>Файл</value>
   </data>
+  <data name="SeachMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="SeachMenuItem.Text" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="AddNewMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="AddNewMenuItem.Text" xml:space="preserve">
+    <value>Додати інформацію</value>
+  </data>
+  <data name="EditMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="EditMenuItem1.Text" xml:space="preserve">
+    <value>Редагувати</value>
+  </data>
+  <data name="DeleteMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="DeleteMenuItem.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
   <data name="EditMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 20</value>
   </data>
   <data name="EditMenuItem.Text" xml:space="preserve">
     <value>Правка</value>
+  </data>
+  <data name="AboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="AboutMenuItem.Text" xml:space="preserve">
+    <value>Про програму</value>
   </data>
   <data name="HelpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -164,426 +218,12 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="OpenFileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
-  </data>
-  <data name="OpenFileMenuItem.Text" xml:space="preserve">
-    <value>Відкрити</value>
-  </data>
-  <data name="CloseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
-  </data>
-  <data name="CloseMenuItem.Text" xml:space="preserve">
-    <value>Закрити</value>
-  </data>
-  <data name="SaveFileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
-  </data>
-  <data name="SaveFileMenuItem.Text" xml:space="preserve">
-    <value>Зберегти</value>
-  </data>
-  <data name="SaveAsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
-  </data>
-  <data name="SaveAsMenuItem.Text" xml:space="preserve">
-    <value>Зберегти як..</value>
-  </data>
-  <data name="SeachMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 22</value>
-  </data>
-  <data name="SeachMenuItem.Text" xml:space="preserve">
-    <value>Пошук</value>
-  </data>
-  <data name="AddNewMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 22</value>
-  </data>
-  <data name="AddNewMenuItem.Text" xml:space="preserve">
-    <value>Додати інформацію</value>
-  </data>
-  <data name="EditMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 22</value>
-  </data>
-  <data name="EditMenuItem1.Text" xml:space="preserve">
-    <value>Редагувати</value>
-  </data>
-  <data name="DeleteMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 22</value>
-  </data>
-  <data name="DeleteMenuItem.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
-  <data name="AboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
-  </data>
-  <data name="AboutMenuItem.Text" xml:space="preserve">
-    <value>Про програму</value>
-  </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>130, -5</value>
   </metadata>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>258, -2</value>
   </metadata>
-  <data name="&gt;&gt;EditArea.Name" xml:space="preserve">
-    <value>EditArea</value>
-  </data>
-  <data name="&gt;&gt;EditArea.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditArea.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditArea.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;EditControlCombo.Name" xml:space="preserve">
-    <value>EditControlCombo</value>
-  </data>
-  <data name="&gt;&gt;EditControlCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditControlCombo.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditControlCombo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;EditPlacingCombo.Name" xml:space="preserve">
-    <value>EditPlacingCombo</value>
-  </data>
-  <data name="&gt;&gt;EditPlacingCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditPlacingCombo.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditPlacingCombo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;EditSupplyCombo.Name" xml:space="preserve">
-    <value>EditSupplyCombo</value>
-  </data>
-  <data name="&gt;&gt;EditSupplyCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditSupplyCombo.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditSupplyCombo.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;EditPowerCombo.Name" xml:space="preserve">
-    <value>EditPowerCombo</value>
-  </data>
-  <data name="&gt;&gt;EditPowerCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditPowerCombo.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditPowerCombo.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;EditSectionCombo.Name" xml:space="preserve">
-    <value>EditSectionCombo</value>
-  </data>
-  <data name="&gt;&gt;EditSectionCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditSectionCombo.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditSectionCombo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;EditElementCombo.Name" xml:space="preserve">
-    <value>EditElementCombo</value>
-  </data>
-  <data name="&gt;&gt;EditElementCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditElementCombo.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditElementCombo.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;EditPurposeCombo.Name" xml:space="preserve">
-    <value>EditPurposeCombo</value>
-  </data>
-  <data name="&gt;&gt;EditPurposeCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditPurposeCombo.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditPurposeCombo.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
-  </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;EditCost.Name" xml:space="preserve">
-    <value>EditCost</value>
-  </data>
-  <data name="&gt;&gt;EditCost.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditCost.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditCost.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;EditDimms.Name" xml:space="preserve">
-    <value>EditDimms</value>
-  </data>
-  <data name="&gt;&gt;EditDimms.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditDimms.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditDimms.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
-  </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;label11.Name" xml:space="preserve">
-    <value>label11</value>
-  </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;EditModel.Name" xml:space="preserve">
-    <value>EditModel</value>
-  </data>
-  <data name="&gt;&gt;EditModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditModel.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditModel.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
-  </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;EditManufacturer.Name" xml:space="preserve">
-    <value>EditManufacturer</value>
-  </data>
-  <data name="&gt;&gt;EditManufacturer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditManufacturer.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditManufacturer.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;label14.Name" xml:space="preserve">
-    <value>label14</value>
-  </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;editCancelButton.Name" xml:space="preserve">
-    <value>editCancelButton</value>
-  </data>
-  <data name="&gt;&gt;editCancelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;editCancelButton.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;editCancelButton.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;editClearButton.Name" xml:space="preserve">
-    <value>editClearButton</value>
-  </data>
-  <data name="&gt;&gt;editClearButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;editClearButton.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;editClearButton.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;EditButton.Name" xml:space="preserve">
-    <value>EditButton</value>
-  </data>
-  <data name="&gt;&gt;EditButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditButton.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditButton.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="EditPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1010, 52</value>
-  </data>
-  <data name="EditPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 480</value>
-  </data>
-  <data name="EditPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="EditPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Name" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="EditArea.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 159</value>
   </data>
@@ -1479,6 +1119,30 @@
   <data name="&gt;&gt;EditButton.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
+  <data name="EditPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1010, 52</value>
+  </data>
+  <data name="EditPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 480</value>
+  </data>
+  <data name="EditPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="EditPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.Name" xml:space="preserve">
+    <value>EditPanel</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="SearchClearButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
@@ -2218,7 +1882,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SearchPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>398, -2</value>
@@ -2226,15 +1890,15 @@
   <data name="AddStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHvSURBVDhPjdFNSBRhHMfxOXXr1K1DBQULC+Fp8SVdpxct
-        NXcLBIkIYZP1EAYZRMKCh7CoTuHJNKhDdd2Fgg5hC0/podAKdZ12d152ZmecmX3VwGVz9+fsoy247iw+
-        8IH/M8PzfQ4Po+v6y2w2qzXyflH5fdI7coqpt3K5HMnn82jk3aKMCzPfhboR6wZiQSPBXxLOzyzg3FRY
-        aPIO7Y+YpkkymQwaSafTWNd1GIaBUCg0vnd0d1UCqVQKh3UgYFVJpXxYBwKaphHrJWAnqSfxSf2AaWWK
-        evrjyazT6Tyyd3w3YEE9P9UljIrDGOT7MSzdxG3pBp0Ho31rZwMOBw2oqkosqMUn4/DztzAQ76XWiypi
-        hT/V/QDXJTo8x44ysiwTRVFQ6434CtdjV6pS/0wIBX7fNzbUep9JJBLEglrj8THclfwgG2F83QyjUCrg
-        7/YmncnGF4wIQ+iPXPxoGxiL3sEjOYBSqUSVy2Xq//6hdA99K+ycbeBZdBI9ayyuRS5TZtGAsMXT2Wup
-        /Ov83PLCNrAgzKNnlUV3pIMyijriW7Hqvnu1o3hm9IST4ThuThRF1POam0XXcjsurbTheeIxJqUJOruX
-        XdvNb5v89Bk9Hs9xn8/Xaqcz0H7V/c0VZJeatQr3vCvoeHC6jR5mGGYHWWXStQY0+wsAAAAASUVORK5C
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHvSURBVDhPjdFNSBRhHMfxOXXr1M1DBQkLCyEEYr5PL5pm
+        7hYIEhLCJushDDKIhAUPYWGdwlNpUIfqugsJHcIWntJDoRXqOu3uvOzMzjgz+6qBy+bur9lHW3DdWXzg
+        A/9nhuf7HB5G1/WX6XRaq+X9svLrlHv0NFNtZTIZks1mUcu7ZRkXZ78JVSPWDcSCWvw/JVyYXULrTFBo
+        cA8fjJimSVKpFGpJJpPY1HUYhoFAIDCxf3RvlQKJRAJHdShgVUmpfFSHApqmEeslYCeux/FR/YAXygw1
+        /f3JnNPpPLZ/fC9gQTU/1BWMiSMY5PsxIg3htnSTzoPhvo2zPoeDBlRVJRZU4uNRePlbGIhepTbzKiK5
+        3+X9ANclOlwnjjOyLBNFUVDpjfgKNyI9ZYm/JoQcf+AbG2i+z8RiMWJBpYnoOO5KXpCtIL5sB5Er5PBn
+        d5vOZOszRoVh9IcuzdsGxsN38Ej2oVAoUMVikfq/fyjdQ98au2AbeBqeQu8Gi+uhK5SZNyDs8HR2W0r/
+        Oj+df24bWBIW0bvOojvUThl5HdGdSHnfvd6erx876WQ4jlsQRRHVvObm0LXahstrLXgWe4wpaZLOravn
+        dpveNnjpM7pcrjqPx9Nsp9PXdq3ja6OfXWnSSjoWG/2OB2da6GGGYf4BV53Srx6eTgYAAAAASUVORK5C
         YII=
 </value>
   </data>
@@ -2252,14 +1916,14 @@
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH/SURBVDhPYyAGaE9Xd4AyiQMqHirsKqUK9upVir6KhTK6
         tlfM7hjM1QqBSuMHlrOM3H1uOj/3uG733/mq1X+HK+YQfNH8mbw/vwBUGXagV6ym6HnMcarjbsvZbpdt
-        9zhfMP0ENwCIzXYadECVYgcyhTKcUCYYyNvLc9heNN0P0mx33vigfKa8JlQKO8jLy1M1NjZmhXLBwOGy
-        +SG9mRoRUC52EBoaytzd3a349u3bvx8+fPj27NXroxcuXOpftGJRRMXsChWQmk2TpYNfHlZZ/uqQ2loY
-        Pr1KMYXhyUyVSd+PlT779+/f/z9//vx/+eb9/4dPX/6/+/AZED/9f+/hk/8vb095++WU2r+f59X+o+Bz
+        9zifNfoENwCIzXYadECVYgcyhTKcUCYYyNvLc9heNN0P0mx33vigfKa8JlQKO8jLy1M1NjZmhXLBwOGy
+        +SG9mRoRUC52EBoaytzd3a346tWrvx8+fPj27NXroxcuXOpftGJRRMXsChWQmk2TpYNfHlZZ/uqQ2loY
+        Pr1KMYXhyUyVSd+PlT779+/f/z9//vx/+eb9/4dPX/6/+/AZED/9f+/hk/8vb095+/G42r+f59X+o+Bz
         ao8Y3s5RfvntTM//33/+/r/17sf/Czfu/r986+H/K7cf/9938tL/G1e2/P9xXuf/j3MqGPjdUaWVDC9n
         SF/7enXR/8+fH/w/eSr3/5MzCf/fXE77//ZK+v/HJwL+fz+rBsTKWPGmKRLpDI+niB36dm/n/x93sv9/
         O6NIEi5N4FVluNghsu77423/v55WAmJ5ovHH03KPwDGwt1pg9rcb+f+/nJQlCT/dK70AbMD6YqH2z6c1
-        /n8+IU0SXtElFAc2YEmtYMmn45L/ScFvDkr+TQ/hlAYbEGjPKbO8S6h6dY9wI7F4Vr1gGFgzAwMDACwG
-        15VXvDUEAAAAAElFTkSuQmCC
+        /n8+IU0SXtElFAc2YEmtYMmn45L/ScEv90v+TQ/hlAYbEGjPKbO8S6h6dY9wI7F4Vr1gGFgzAwMDAPRI
+        13tf10TxAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="OpenStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -2296,17 +1960,17 @@
   <data name="EditStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIzSURBVDhPYyAEQgUF+e+7uV167OFxqF5LSwUoxAiRIQ4w
-        nc/IWHbH3v7vPUfHv0/c3T/stLZOBooTZQjjpt6gqOe3z/29P3XKvzseHv/uurr+uw806Lar61pjBgZW
-        qDrsINlJTPz9POVnT+YY/ntxdun/lydP/H+cmPj/jovLv/uurp+95eQEoUqxAsZnczQ2PJ+j+PfhROl/
-        DyaK/3+4PuX/05sX/j2a0P93h7V1AUgNRCkmYNzfpJzyYq7S30eTpP89nSr5/8EEkf8Pgexb04z+3Tu9
-        7rS9vT0HVC0mqAgRVXk3X+UDSPOLGdL/H00S+/9kisT/hxOl/t3uF32b5SUgD1WKCeztGVhez1Y5/Hiy
-        7L8nU2T/PZ8u/f/xZHGgAbL/7k4S/7syhzcGqAy30093yFc/mSUHdvqbOQr/Qc5/OlXu38PpUn8vdgiv
-        AKmBKMUC6rOsDF7NVvr2YILUv/fzlf6/miUH1gzCDyaKPoo15RWGKsUKGPft2VP/9urWv68Wm/97v0Dl
-        /+vZ8v9fzlT892i69O9ZKXzuUHU4AePNmzfnfvn86d+3d4//f9iZ8v/1HLV/T2cr/D3fITYJJA9Rhhsw
-        fvr0aefnz5//ffz44d+7t2/+vTq98O+TOVpXfIwZuKBq8AKm0tLS62fOnPn3/v37fy9fvvhz/vz51YlR
-        3kpQeYKASVtb+5Ouru6fpUuXbisuLjYFihGVYcCAm5tbTFVVdb+EhIQ9kEu8RgYGBgBOFgrdo8aJQQAA
-        AABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIvSURBVDhPYyAEQgUF+e+7uV167OFxqF5LSwUoxAiRIQ4w
+        nc/IWHbT3v7vbSB+4u7+Yae1dTJQnChDGDf1BkU9uXH6751JE//d9PD4d8vV9d8dkGGurmuNGRhYoeqw
+        g2QnMfH385SfPZxp+O/F2aX/X5488f9xYuL/my4u/+67un72lpMThCrFChifzdHY8GSO4t97fdL/HkwU
+        //9wfcr/R9fO/rs/of/vDmvrApAaiFJMwLi/STnl6Vylv/f7pf89nSr5/8EEkf/3gOzrk43+3Tu97rS9
+        vT0HVC0mqAgRVXk3X+UDSPOLGdL/H00S+/9kisT/e31S/273i77N8hKQhyrFBPb2DCyvZ6scfjBB9t/D
+        ibL/nk+X/v94MtD5QPatSeJ/V+bwxgCV4Xb66Q756oez5MBOfzNH4T/I+Y8myf27N13q78UO4RUgNRCl
+        WEB9lpXBq9lK3+72Sv17P1/p/6tZcmDNIPxgouijWFNeYahSrIBx35499a8ubf37fIH5v/cLVP6/ni3/
+        /9k0xX/3p0v/npXC5w5VhxMw3rx5c+7HD+//fXv3+P+HnSn/X8xU+/dotsLf8x1ik0DyEGW4AeOnT592
+        fvjw4d+7d2//vX718t/zEwv/PpmjdcXHmIELqgYvYCotLb1+8uTJf2/evPn37NnTP+fPn1+dGOWtBJUn
+        CJi0tbU/aWlp/Vm6dOm24uJiU6AYURkGDLi5ucVUVVX3S0hI2AO5xGtkYGAAADr6CdDvrSdMAAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="EditStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -2321,16 +1985,16 @@
   <data name="DeleteStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPjZLPaxpBHMXn1EsoRhMvCR5CCGQJORhySf+I
-        XEoOIvSUUyO5Wmyhl+QipaaWtqTaFFdlaQ6lEta9tKzWIA1dHRVU2DXKiusv9NLc/XZ2M0lpdyv5wofH
-        d+a9BwODbmY8HodHoxGehtfrfUzt5tENpASm4fP5Jh6Px7pELxgMBtDpdCwh9xAKhcDv908CgYC5ZDgc
-        4m63C61WyxJyfwvxKTT2Z3q9Hu73+3AXLAs0TcPNZhOq1epUdA/xmgtUVcXtdhvuAnmSuaDRaOB6vQ6F
-        QsES6eLCUN3TvLxUnu/s3KPR65FlGSuKAqTIRHZ/H4StLZDPz0H34NPTX2fLy1df1tef0ThCtVoNVyoV
-        KBaLf1GQJGAZBpLz85De2AAcicDZyoqxR53ObzSOULlcxqVSyVSg84PnIbm6aoQ4p9PQj3b7zyc2m53G
-        EZIkCRPgf4jkE0UcDvhAeDc3N+HW1h7Q6PXk83mcy+VAFEWDTCYD5MxAZFl443LBK5sNwrOzhr5dWOhF
-        3G6GxhHKZrNGwb98J0XBxUU4mJmB1243CCcn8HJpydiDDkcJRaPR+7FYjEmlUrF0Oi0TVJ7nNUEQeje8
-        390dBTc3rz4nk6ru+XR8/PWAYbTQ9vYjxHGci2XZh4lEYi8ejweIHpL9BdEjQphyRM8Oiecp0T09w3Gc
-        6zeUiHYNM0uh8wAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPjZLPa9pgHMbf0y5lWG29tAjtodBQerD00v0R
+        vYweRNipp1V6dbjBLu1FxuzcD+h0HUYl7DIqJebSEZ1FVpb4qqBCYpWIMSp6We9+9yZNV7Zk0i98ePi+
+        7/M88MKLbmc8HkdHoxGeht/vf2raraMbSAlMIxAITHw+n32JXjAYDKDb7dpC7iESiUAwGJyEQiFryXA4
+        xL1eD9rtti3k/g/EJ5uxu9E0Dff7fbgPtgWqquJWqwW1Wm0quod4rQWKouBOpwP3gTzJWtBsNnGj0QBR
+        FG0RLi8N1T2tqyv55c7OAzN6M5IkYVmWgRRZyO/vA7e1BdLFBegekWF+nS0tXZ+ur78w4wjV63VcrVah
+        VCr9hSgIQFMUpOfnIbuxATgWg7OVFWOPu93fzDhClUoFl8tlS4HOD5aF9OqqEWLcbkM/O50/nzkcTjOO
+        kCAImAD/gyefKOZywSfCu7m5CbO29siM3kyxWMSFQgF4njfI5XJAzgx4mob3Hg+8cTggOjtr6IeFBS3m
+        9VJmHKF8Pm8U/Mt3UhReXISDmRl46/UCd3ICr5eXjT3scpVRPB5/mEgkqEwmk8hmsxJBYVlW5ThOu+Xj
+        7u4ovLl5/TWdVnTPl+Pj8wOKUiPb208QwzAemqYfp1KpvWQyGSJ6SPZXRI8IUZMj8+yQeJ4T3dMzDMN4
+        fgN3+HX8yGRwGQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="DeleteStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -2345,18 +2009,18 @@
   <data name="SearchStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVDhPY0ACjFYtK4IDd77dH7j7wxff3a9/Buz8cNF5
-        1olSGYsQTqgaXCCU2XPFzTneO57/8dn58q/31kd/vbc8+Ou94wUI//Hb8vKUmk+aCFQxBmC0m36ozGPr
-        0z9+6599T1l/uXHG3ot2M/eesqrcdjXZc/Wdp57bnv71Wv9wG0gtRAsSELW35/Hc+PSt2+bHf/PXnUl9
-        9/FL7Jcv30q+fPtW8fXr99y5xx/aeG188Nl108M/mhmdtlBtCKCaWO3itOH+H/dlN26v2LjNYs6cOfJA
-        YcbQ0FDmgwePmX34/C0yZO3NuU4bH/yx6tvVDJIDa4QB9ZTmaPu1d/7Yzzq2MyoqShAqDAdXr161TVp7
-        sdxh3b0/FpMPzAIKoRqgFJznbLP05h/7hVfvKuqYi0OF4SAtLY3Lf83teTarb/0xbF7VBBRCNUBcT4/b
-        cv6l13bLr/01ye0pkZGREYJKgQCTfkCcmdXy218sF139oxycawUVRwGMuuWzC83mX/ljPf/GT9Pq+ZN1
-        fGNc9bwizA1zWsus5lx+abPs6l/LyQc3AdUyQbRgAibD5jVTjWdf/mOx6NJfi0UX4dhq8cW/YcuO/T20
-        c/GGmnAJTaBazKiEAkbFiDJvk/4dW82mH39lNvnwB9NJB07oFEzMPbmlb+Prxdp/389X+jwvUxTkDZyG
-        gABIEuRUEAaxGfsTxSKfz1X++3Ke0t83c5Ve1IfwqQDFSQKMh1tk5z2dLff3GRA/nyF9LdaZVxgqRxzQ
-        0mJgu9AhvfvhdKm/j4D4wSTJfR4qDOxQaeKAjS6/4OUeict3J4v/vdMr/qc9gicQKkU8iLJhV7rcKXT3
-        QpvoaQ8DHlEAaNMZ+8fgfW8AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVDhPY0ACjFYtK4IDd77dH7j7wxev3S9/Buz8cNF5
+        1olSGYsQTqgaXCCU2XPFzTkeO5788dz57K/H1vt/Pbbc/eux4ykI//Hb8vKUmk+aCFQxBmC0m36ozHXr
+        oz9+6599T1l/uXHG3ot2M/eesqrcdjXZc/Wdp27bHv31Wv9wG0gtRAsSELW35/Hc+PSt8+YHf/PXnUl9
+        9/FL7Jcv30q+fPtW8fXr99y5xx/aeG28/9lp070/mhmdtlBtCKCaWO1iv+HOH/dlN26v2LjNYs6cOfJA
+        YcbQ0FDmgwePmX34/C0yZO3NufYb7/6x6tvVDJIDa4QB9ZTmaJu1N//Yzzq2MyoqShAqDAdXr161TVp7
+        sdx23e0/FpMPzAIKoRqgFJznbLno2h/7hVfvKuqYi0OF4SAtLY3Lf83teZarr/8xbF7VBBRCNUBcT4/b
+        cv6l13bLL/81ye0pkZGREYJKgQCTfkCcmeXy21/M5l/5oxycawUVRwGMuuWzC43nXPljPefGT9Pq+ZN1
+        fGNc9bwizA1zWsus5lx+abPs0l/LyQc3AdUyQbRgAibD5jVTDWZc/mOx6Pxfi0Xn4Nhq8bm/wcsO/z20
+        c/GGmnAJTaBazKiEAkbFiDJvk/4dW82mH39lNuHwB9NJB07oFEzMPbmlb+OLxdp/38+X/zwvUxTkDZyG
+        gABIEuRUEAaxGfsTxSKfzFX++2ye0t83c5Ve1IfwqQDFSQKMh1tk5z2aLff3MRA/nyF9LdaZVxgqRxzQ
+        0mJgu9AhvfvedKm/94H4wSTJfR4qDOxQaeKAjS6/4OUeicu3Jov/vdkl/qc9gicQKkU8iLJhV7rcKXT3
+        QpvoaQ8DHlEAmPgZPD/U19MAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="SearchStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -2392,6 +2056,18 @@
   <data name="&gt;&gt;toolStrip.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="listView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="listView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 479</value>
+  </data>
+  <data name="listView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;listView.Name" xml:space="preserve">
     <value>listView</value>
   </data>
@@ -2424,30 +2100,6 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="listView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="listView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="listView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 479</value>
-  </data>
-  <data name="listView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;listView.Name" xml:space="preserve">
-    <value>listView</value>
-  </data>
-  <data name="&gt;&gt;listView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;listView.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="addButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -3443,13 +3095,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AddPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>26</value>
+    <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -6318,6 +5970,9 @@
         /KpDjsJXIkgiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAACAAAAAwAAAAA==
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Heaters Accounting System</value>
